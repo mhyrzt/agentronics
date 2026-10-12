@@ -1,0 +1,419 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (generator_version "9.0")
+  (uuid "2fc4bea2-122a-5020-9ec0-13f239cb6fbc")
+  (paper "A3")
+  (title_block
+    (title "Four-channel wireless EEG learning prototype")
+    (rev "B - bench prototype")
+  )
+  (lib_symbols)
+  (sheet
+    (at 35 50)
+    (size 90 50)
+    (stroke
+      (width 0.254)
+      (type default)
+    )
+    (fill
+      (color 0 0 0 0)
+    )
+    (uuid "9de2ccb7-e1ef-5a39-a84c-3840f6255536")
+    (property "Sheetname" "Inputs"
+      (at 35 48.73 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Sheetfile" "Inputs.kicad_sch"
+      (at 35 101.27000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc"
+          (page "2")
+        )
+      )
+    )
+  )
+  (text "Electrode connector"
+    (at 42.62 62.7 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "2c46ed00-39f1-5dba-ba09-9e982c0883fb")
+  )
+  (text "Four differential filters"
+    (at 42.62 72.86 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "8c9f8021-2766-50a2-ae9a-7308a48185d3")
+  )
+  (text "Common reference + bias"
+    (at 42.62 83.02000000000001 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "e2f0feab-2996-5c3f-9a0f-1bcb7cae9b92")
+  )
+  (sheet
+    (at 155 50)
+    (size 90 50)
+    (stroke
+      (width 0.254)
+      (type default)
+    )
+    (fill
+      (color 0 0 0 0)
+    )
+    (uuid "d498b82e-e033-57b5-a07c-157fb0c18924")
+    (property "Sheetname" "Frontend"
+      (at 155 48.73 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Sheetfile" "Frontend.kicad_sch"
+      (at 155 101.27000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc"
+          (page "3")
+        )
+      )
+    )
+  )
+  (text "ADS1299-4 acquisition"
+    (at 162.62 62.7 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "62ffdda3-1ef9-5fa9-8108-1868ab86a9c1")
+  )
+  (text "250 samples/s/channel"
+    (at 162.62 72.86 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "3c0eba4d-65cd-5476-b70f-38fcc5fd63c8")
+  )
+  (text "Reference / supply bypass"
+    (at 162.62 83.02000000000001 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "d6a81a9d-521e-5d13-adeb-c36488c3afb5")
+  )
+  (sheet
+    (at 95 145)
+    (size 90 50)
+    (stroke
+      (width 0.254)
+      (type default)
+    )
+    (fill
+      (color 0 0 0 0)
+    )
+    (uuid "4dc0247a-13d1-5f40-b1d0-b2a9ca174417")
+    (property "Sheetname" "Power"
+      (at 95 143.73 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Sheetfile" "Power.kicad_sch"
+      (at 95 196.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc"
+          (page "4")
+        )
+      )
+    )
+  )
+  (text "Protected 2S battery input"
+    (at 102.62 157.7 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "c8af5185-1372-5461-ab17-8b89799e8ac0")
+  )
+  (text "3.3 V digital / 5 V analog"
+    (at 102.62 167.85999999999999 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "3a6b0d10-1164-504c-a8a2-86f91637cf62")
+  )
+  (text "Removable enable shunt"
+    (at 102.62 178.01999999999998 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "7e97f70c-ab77-50e2-a122-f3a170f7d184")
+  )
+  (sheet
+    (at 215 145)
+    (size 90 50)
+    (stroke
+      (width 0.254)
+      (type default)
+    )
+    (fill
+      (color 0 0 0 0)
+    )
+    (uuid "4835678f-226c-54ee-bf9e-796dfd3fb38e")
+    (property "Sheetname" "USB"
+      (at 215 143.73 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Sheetfile" "USB.kicad_sch"
+      (at 215 196.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc"
+          (page "5")
+        )
+      )
+    )
+  )
+  (text "USB-C bench power only"
+    (at 222.62 157.7 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "2cc07de6-0c9e-5c82-840c-d5f79a1a678e")
+  )
+  (text "Diode OR / analog 9 V boost"
+    (at 222.62 167.85999999999999 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "072c08cf-ee70-5899-bac2-e57819a26680")
+  )
+  (text "No charging / no USB data"
+    (at 222.62 178.01999999999998 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "a151758c-042e-5a77-a208-189a528a0ae0")
+  )
+  (sheet
+    (at 275 50)
+    (size 90 50)
+    (stroke
+      (width 0.254)
+      (type default)
+    )
+    (fill
+      (color 0 0 0 0)
+    )
+    (uuid "59f1ce6a-9eab-50a0-8c46-0fa9b6c7ac44")
+    (property "Sheetname" "Controller"
+      (at 275 48.73 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Sheetfile" "Controller.kicad_sch"
+      (at 275 101.27000000000001 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc"
+          (page "6")
+        )
+      )
+    )
+  )
+  (text "Cable to external ESP32"
+    (at 282.62 62.7 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "16626113-2383-5fa6-a909-eab42e757702")
+  )
+  (text "3.3 V logic / optional power"
+    (at 282.62 72.86 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "fa7cfd6e-597f-5245-9478-3d662f92f9ec")
+  )
+  (text "Wi-Fi HTTP + WebSocket target"
+    (at 282.62 83.02000000000001 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "2c7468f0-7156-57ae-8907-ab3658a25118")
+  )
+  (text ">"
+    (at 140 75 0)
+    (effects
+      (font
+        (size 4 4)
+      )
+    )
+    (uuid "448c43ee-3798-5c56-9e6c-1dd8f93795f4")
+  )
+  (text ">"
+    (at 260 75 0)
+    (effects
+      (font
+        (size 4 4)
+      )
+    )
+    (uuid "46ddbacd-e344-50b9-882f-d50e53e846b5")
+  )
+  (text "^"
+    (at 180 128 0)
+    (effects
+      (font
+        (size 4 4)
+      )
+    )
+    (uuid "efdce63a-6242-572a-b605-15008a41db6d")
+  )
+  (text "4 channels + common reference + bias electrode; 250 samples/s/channel nominal."
+    (at 45 220 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "b34adf06-4386-534f-b561-29e044a45297")
+  )
+  (text "Protected 2S battery, 6.4-8.4V; USB-C 5V bench adapter; external charging only."
+    (at 45 230 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "8ba28d66-9b11-5c53-913a-f0b8b5f3682c")
+  )
+  (text "External ESP32 via cable header; Wi-Fi firmware pending; USB-C is bench power only."
+    (at 45 240 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "3c4b9844-7d8e-5b55-9a98-da1e7b4b9a68")
+  )
+  (text "BENCH PROTOTYPE: validate using a simulator before any human connection."
+    (at 45 250 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "0419e7ee-7d16-5759-8101-6bd2da5896f8")
+  )
+  (text "Disconnect electrodes before charging, wired programming, or grounded instruments."
+    (at 45 260 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "7764efbb-5afa-5123-a51b-10f564179c81")
+  )
+  (sheet_instances
+    (path "/"
+      (page "1")
+    )
+  )
+)

@@ -1,0 +1,4 @@
+(fp_lib_table
+ (version 7)
+ (lib (name "EEG_Footprints")(type "KiCad")(uri "${KIPRJMOD}/EEG_Footprints.pretty")(options "")(descr "Project antenna graphics and mounting holes"))
+)

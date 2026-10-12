@@ -1,0 +1,2413 @@
+[
+  {
+    "sheet": "Frontend",
+    "reference": "U1",
+    "symbol": "Analog_ADC:ADS1299",
+    "value": "ADS1299-4",
+    "position": {
+      "x": 100,
+      "y": 105
+    },
+    "footprint": "Package_QFP:TQFP-64_10x10mm_P0.5mm",
+    "nets": {
+      "1": "A5V",
+      "2": "A5V",
+      "3": "A5V",
+      "4": "A5V",
+      "5": "A5V",
+      "6": "A5V",
+      "7": "A5V",
+      "8": "A5V",
+      "9": "CH4_N",
+      "10": "CH4_ADC",
+      "11": "CH3_N",
+      "12": "CH3_ADC",
+      "13": "CH2_N",
+      "14": "CH2_ADC",
+      "15": "CH1_N",
+      "16": "CH1_ADC",
+      "19": "A5V",
+      "20": "GND",
+      "24": "VREFP",
+      "25": "GND",
+      "26": "VCAP4",
+      "28": "VCAP1",
+      "30": "VCAP2",
+      "31": "GND",
+      "33": "GND",
+      "34": "ADC_MOSI",
+      "35": "ADC_PWDN",
+      "36": "ADC_RESET",
+      "37": "GND",
+      "38": "ADC_START",
+      "39": "ADC_CS",
+      "40": "ADC_SCLK",
+      "41": "GND",
+      "42": "ADC_GPIO1",
+      "43": "ADC_MISO",
+      "44": "ADC_GPIO2",
+      "45": "ADC_GPIO3",
+      "46": "ADC_GPIO4",
+      "47": "ADC_DRDY",
+      "48": "3V3",
+      "52": "ADC_CLKSEL",
+      "53": "GND",
+      "54": "A5V_CP",
+      "55": "VCAP3",
+      "60": "GND",
+      "61": "BIAS_INV",
+      "62": "GND",
+      "63": "BIAS_OUT"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "ADS1299-4PAG",
+      "Manufacturer": "Texas Instruments",
+      "Notes": "4-channel ADS1299-4 variant. Independent differential filters; SRB1/SRB2 disabled. Internal bias reference."
+    },
+    "caption_position": {
+      "x": 125,
+      "y": 35
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "J1",
+    "symbol": "Connector_Generic:Conn_01x06",
+    "value": "ELECTRODES",
+    "position": {
+      "x": 45,
+      "y": 40
+    },
+    "footprint": "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical",
+    "nets": {
+      "1": "CH1_E",
+      "2": "CH2_E",
+      "3": "CH3_E",
+      "4": "CH4_E",
+      "5": "REF_E",
+      "6": "BIAS_E"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "B6B-XH-A",
+      "Manufacturer": "JST",
+      "Notes": "Electrode connector: channels 1-4, reference, bias. No ground electrode."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R1",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 50,
+      "y": 85
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH1_E",
+      "2": "CH1_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R2",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 110,
+      "y": 85
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH1_CLAMP",
+      "2": "CH1_ADC"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Secondary current limiting and differential RC filter"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D1",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 80,
+      "y": 100
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "CH1_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "C1",
+    "symbol": "Device:C",
+    "value": "4.7n",
+    "position": {
+      "x": 160,
+      "y": 100
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "CH1_ADC",
+      "2": "CH1_N"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21A5C1H472JA01D",
+      "Manufacturer": "Murata",
+      "Notes": "C0G differential RF filter, 50V, 5%"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R3",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 240,
+      "y": 85
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH2_E",
+      "2": "CH2_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R4",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 300,
+      "y": 85
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH2_CLAMP",
+      "2": "CH2_ADC"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Secondary current limiting and differential RC filter"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D2",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 270,
+      "y": 100
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "CH2_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "C2",
+    "symbol": "Device:C",
+    "value": "4.7n",
+    "position": {
+      "x": 350,
+      "y": 100
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "CH2_ADC",
+      "2": "CH2_N"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21A5C1H472JA01D",
+      "Manufacturer": "Murata",
+      "Notes": "C0G differential RF filter, 50V, 5%"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R5",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 50,
+      "y": 190
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH3_E",
+      "2": "CH3_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R6",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 110,
+      "y": 190
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH3_CLAMP",
+      "2": "CH3_ADC"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Secondary current limiting and differential RC filter"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D3",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 80,
+      "y": 205
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "CH3_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "C3",
+    "symbol": "Device:C",
+    "value": "4.7n",
+    "position": {
+      "x": 160,
+      "y": 205
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "CH3_ADC",
+      "2": "CH3_N"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21A5C1H472JA01D",
+      "Manufacturer": "Murata",
+      "Notes": "C0G differential RF filter, 50V, 5%"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R7",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 240,
+      "y": 190
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH4_E",
+      "2": "CH4_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R8",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 300,
+      "y": 190
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "CH4_CLAMP",
+      "2": "CH4_ADC"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Secondary current limiting and differential RC filter"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D4",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 270,
+      "y": 205
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "CH4_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "C4",
+    "symbol": "Device:C",
+    "value": "4.7n",
+    "position": {
+      "x": 350,
+      "y": 205
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "CH4_ADC",
+      "2": "CH4_N"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21A5C1H472JA01D",
+      "Manufacturer": "Murata",
+      "Notes": "C0G differential RF filter, 50V, 5%"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R9",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 50,
+      "y": 115
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF_E",
+      "2": "REF_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R10",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 110,
+      "y": 115
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF_CLAMP",
+      "2": "CH1_N"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Secondary current limiting and differential RC filter"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D5",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 80,
+      "y": 130
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "REF_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R11",
+    "symbol": "Device:R",
+    "value": "499k",
+    "position": {
+      "x": 145,
+      "y": 35
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "BIAS_OUT",
+      "2": "BIAS_LIMIT"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07499KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Independent bias current limiting resistor"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R12",
+    "symbol": "Device:R",
+    "value": "499k",
+    "position": {
+      "x": 205,
+      "y": 35
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "BIAS_LIMIT",
+      "2": "BIAS_E"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07499KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Independent bias current limiting resistor"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R13",
+    "symbol": "Device:R",
+    "value": "1M",
+    "position": {
+      "x": 350,
+      "y": 140
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "BIAS_OUT",
+      "2": "BIAS_INV"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-071ML",
+      "Manufacturer": "Yageo",
+      "Notes": "Bias feedback"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C5",
+    "symbol": "Device:C",
+    "value": "1n",
+    "position": {
+      "x": 350,
+      "y": 160
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "BIAS_OUT",
+      "2": "BIAS_INV"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "GRM21A5C1H102JA01D",
+      "Manufacturer": "Murata",
+      "Notes": "C0G bias feedback; bench stability verification required"
+    },
+    "caption_position": {
+      "x": 350,
+      "y": 148
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C6",
+    "symbol": "Device:C_Polarized",
+    "value": "100u",
+    "position": {
+      "x": 210,
+      "y": 85
+    },
+    "footprint": "Capacitor_Tantalum_SMD:CP_EIA-7343-31_Kemet-D",
+    "nets": {
+      "1": "VCAP1",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "T491D107K010AT",
+      "Manufacturer": "KEMET",
+      "Notes": "Tantalum 100uF 10V; polarity positive at VCAP1"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C7",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 250,
+      "y": 85
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "VCAP2",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Local bypass; voltage >=16V; verify effective capacitance"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C8",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 290,
+      "y": 85
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "VCAP3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Local bypass; voltage >=16V; verify effective capacitance"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C9",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 325,
+      "y": 85
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "VCAP3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": "Local bypass; voltage >=16V; verify effective capacitance"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C10",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 210,
+      "y": 140
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "VCAP4",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Local bypass; voltage >=16V; verify effective capacitance"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C11",
+    "symbol": "Device:C",
+    "value": "10u",
+    "position": {
+      "x": 250,
+      "y": 140
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "VREFP",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR71C106KA12L",
+      "Manufacturer": "Murata",
+      "Notes": "Local bypass; voltage >=16V; verify effective capacitance"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C12",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 290,
+      "y": 140
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "VREFP",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": "Local bypass; voltage >=16V; verify effective capacitance"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C13",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 40,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Place one beside each AVDD supply group"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C14",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 75,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Place one beside each AVDD supply group"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C15",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 110,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Place one beside each AVDD supply group"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C16",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 145,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Place one beside each AVDD supply group"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C17",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 180,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Place one beside each AVDD supply group"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C18",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 310,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V_CP",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Place one beside each AVDD supply group"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C19",
+    "symbol": "Device:C",
+    "value": "10u",
+    "position": {
+      "x": 215,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR71C106KA12L",
+      "Manufacturer": "Murata",
+      "Notes": "Analog rail bulk bypass"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C20",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 250,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C21",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 350,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "C22",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 380,
+      "y": 225
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R14",
+    "symbol": "Device:R",
+    "value": "0",
+    "position": {
+      "x": 280,
+      "y": 215
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "A5V_CP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805JR-070RL",
+      "Manufacturer": "Yageo",
+      "Notes": "Star link to AVDD1"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R15",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 65,
+      "y": 270
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "ADC_GPIO1",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Unused GPIO pulldown"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R16",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 130,
+      "y": 270
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "ADC_GPIO2",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Unused GPIO pulldown"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R17",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 195,
+      "y": 270
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "ADC_GPIO3",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Unused GPIO pulldown"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R18",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 260,
+      "y": 270
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "ADC_GPIO4",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Unused GPIO pulldown"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R19",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 55,
+      "y": 175
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "ADC_CLKSEL"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R20",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 125,
+      "y": 175
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "ADC_PWDN"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R21",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 195,
+      "y": 175
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "ADC_RESET",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Hold ADC in reset until firmware sequencing"
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R22",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 55,
+      "y": 190
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "ADC_START",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Frontend",
+    "reference": "R23",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 125,
+      "y": 190
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "ADC_CS"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "SPI deselect while MCU resets"
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "R24",
+    "symbol": "Device:R",
+    "value": "33",
+    "position": {
+      "x": 170,
+      "y": 65
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "MCU_SCLK",
+      "2": "ADC_SCLK"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0733RL",
+      "Manufacturer": "Yageo",
+      "Notes": "SPI source termination"
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "R25",
+    "symbol": "Device:R",
+    "value": "33",
+    "position": {
+      "x": 170,
+      "y": 90
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "MCU_MOSI",
+      "2": "ADC_MOSI"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0733RL",
+      "Manufacturer": "Yageo",
+      "Notes": "SPI source termination"
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "R26",
+    "symbol": "Device:R",
+    "value": "33",
+    "position": {
+      "x": 170,
+      "y": 115
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "MCU_CS",
+      "2": "ADC_CS"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0733RL",
+      "Manufacturer": "Yageo",
+      "Notes": "SPI source termination"
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "C24",
+    "symbol": "Device:C",
+    "value": "10u",
+    "position": {
+      "x": 260,
+      "y": 70
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR71C106KA12L",
+      "Manufacturer": "Murata",
+      "Notes": "Local bulk bypass"
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "C25",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 285,
+      "y": 70
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "R31",
+    "symbol": "Device:R",
+    "value": "330k",
+    "position": {
+      "x": 245,
+      "y": 170
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "BAT_SW",
+      "2": "VIN_SENSE"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07330KL",
+      "Manufacturer": "Yageo",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "R32",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 325,
+      "y": 170
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "VIN_SENSE",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "C27",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 285,
+      "y": 200
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "VIN_SENSE",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "J2",
+    "symbol": "Connector_Generic:Conn_01x02",
+    "value": "2S_BATTERY",
+    "position": {
+      "x": 40,
+      "y": 40
+    },
+    "footprint": "Connector_JST:JST_XH_B2B-XH-A_1x02_P2.50mm_Vertical",
+    "nets": {
+      "1": "BAT_PLUS",
+      "2": "GND"
+    },
+    "rotation": 180,
+    "properties": {
+      "MPN": "B2B-XH-A",
+      "Manufacturer": "JST",
+      "Notes": "Protected 2S Li-ion pack, 6.4-8.4V operating. Remove pack for external charging."
+    },
+    "caption_position": {
+      "x": 45,
+      "y": 28
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "F1",
+    "symbol": "Device:Polyfuse",
+    "value": "0.75A_PTC",
+    "position": {
+      "x": 90,
+      "y": 40
+    },
+    "footprint": "Fuse:Fuse_1812_4532Metric",
+    "nets": {
+      "1": "BAT_PLUS",
+      "2": "BAT_FUSED"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "1812L075/24DR",
+      "Manufacturer": "Littelfuse",
+      "Notes": "Pack also requires its own protection and fuse"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "D6",
+    "symbol": "Device:D_Schottky",
+    "value": "SS14",
+    "position": {
+      "x": 125,
+      "y": 40
+    },
+    "footprint": "Diode_SMD:D_SMA",
+    "nets": {
+      "1": "BAT_PROTECTED",
+      "2": "BAT_FUSED"
+    },
+    "rotation": 180,
+    "properties": {
+      "MPN": "SS14",
+      "Manufacturer": "Diodes Incorporated",
+      "Notes": "Reverse polarity blocking"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "J4",
+    "symbol": "Connector_Generic:Conn_01x02",
+    "value": "POWER_ENABLE",
+    "position": {
+      "x": 175,
+      "y": 50
+    },
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "nets": {
+      "1": "BAT_PROTECTED",
+      "2": "BAT_SW"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "61300211121",
+      "Manufacturer": "Wurth Elektronik",
+      "Notes": "Fit a rated 2.54mm shunt to enable power; remove to turn off. Battery disconnect is the master power switch."
+    },
+    "caption_position": {
+      "x": 180,
+      "y": 38
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "U3",
+    "symbol": "Regulator_Switching:AP63203WU",
+    "value": "AP63203WU-7",
+    "position": {
+      "x": 145,
+      "y": 110
+    },
+    "footprint": "Package_TO_SOT_SMD:TSOT-23-6",
+    "nets": {
+      "1": "3V3",
+      "2": "BAT_SW",
+      "3": "BAT_SW",
+      "4": "GND",
+      "5": "BUCK_SW",
+      "6": "BUCK_BST"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "AP63203WU-7",
+      "Manufacturer": "Diodes Incorporated",
+      "Notes": ""
+    },
+    "caption_position": {
+      "x": 145,
+      "y": 70
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C28",
+    "symbol": "Device:C",
+    "value": "10u",
+    "position": {
+      "x": 70,
+      "y": 100
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "BAT_SW",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR71C106KA12L",
+      "Manufacturer": "Murata",
+      "Notes": "Input ceramic 16V minimum"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C29",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 105,
+      "y": 100
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "BAT_SW",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C30",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 195,
+      "y": 100
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "BUCK_BST",
+      "2": "BUCK_SW"
+    },
+    "rotation": 180,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": "Bootstrap"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "L1",
+    "symbol": "Device:L",
+    "value": "4.7uH",
+    "position": {
+      "x": 230,
+      "y": 90
+    },
+    "footprint": "Inductor_SMD:L_Bourns_SRP5030T",
+    "nets": {
+      "1": "BUCK_SW",
+      "2": "3V3"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "SRP5030T-4R7M",
+      "Manufacturer": "Bourns",
+      "Notes": "Shielded 4.7uH, 4.6A RMS, 6A saturation per Bourns datasheet"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C31",
+    "symbol": "Device:C",
+    "value": "22u",
+    "position": {
+      "x": 280,
+      "y": 110
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR61E226KE15L",
+      "Manufacturer": "Murata",
+      "Notes": "Buck output 25V X5R"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C32",
+    "symbol": "Device:C",
+    "value": "22u",
+    "position": {
+      "x": 325,
+      "y": 110
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR61E226KE15L",
+      "Manufacturer": "Murata",
+      "Notes": "Buck output 25V X5R"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "U4",
+    "symbol": "Regulator_Linear:LP2985-5.0",
+    "value": "LP2985AIM5-5.0/NOPB",
+    "position": {
+      "x": 145,
+      "y": 200
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23-5",
+    "nets": {
+      "1": "BOOST9V",
+      "2": "GND",
+      "3": "BOOST9V",
+      "4": "LDO_BP",
+      "5": "A5V"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "LP2985AIM5-5.0/NOPB",
+      "Manufacturer": "Texas Instruments",
+      "Notes": "5V analog regulator; bypass 10nF; effective output capacitance >=2.2uF"
+    },
+    "caption_position": {
+      "x": 145,
+      "y": 175
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C33",
+    "symbol": "Device:C",
+    "value": "10u",
+    "position": {
+      "x": 80,
+      "y": 200
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "BOOST9V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR71C106KA12L",
+      "Manufacturer": "Murata",
+      "Notes": "Analog input bypass"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C34",
+    "symbol": "Device:C",
+    "value": "10n",
+    "position": {
+      "x": 195,
+      "y": 210
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "LDO_BP",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21A5C1H103JA01D",
+      "Manufacturer": "Murata",
+      "Notes": "C0G low noise bypass"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C35",
+    "symbol": "Device:C",
+    "value": "10u",
+    "position": {
+      "x": 280,
+      "y": 200
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR71C106KA12L",
+      "Manufacturer": "Murata",
+      "Notes": "Ensure effective capacitance >=2.2uF and stability ESR"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "C36",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 325,
+      "y": 200
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "A5V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "#FLG01",
+    "symbol": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "position": {
+      "x": 65,
+      "y": 270
+    },
+    "footprint": "",
+    "nets": {
+      "1": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "PWR_FLAG",
+      "Manufacturer": "Specified in BOM",
+      "Notes": "ERC supply source marker"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "#FLG02",
+    "symbol": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "position": {
+      "x": 115,
+      "y": 270
+    },
+    "footprint": "",
+    "nets": {
+      "1": "BAT_SW"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "PWR_FLAG",
+      "Manufacturer": "Specified in BOM",
+      "Notes": "ERC supply source marker"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "#FLG03",
+    "symbol": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "position": {
+      "x": 165,
+      "y": 270
+    },
+    "footprint": "",
+    "nets": {
+      "1": "3V3"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "PWR_FLAG",
+      "Manufacturer": "Specified in BOM",
+      "Notes": "ERC supply source marker"
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "#FLG04",
+    "symbol": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "position": {
+      "x": 215,
+      "y": 270
+    },
+    "footprint": "",
+    "nets": {
+      "1": "A5V_CP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "PWR_FLAG",
+      "Manufacturer": "Specified in BOM",
+      "Notes": "ERC supply source marker"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R33",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 240,
+      "y": 115
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF_E",
+      "2": "REF2_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R34",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 300,
+      "y": 115
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF2_CLAMP",
+      "2": "CH2_N"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D7",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 270,
+      "y": 130
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "REF2_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R35",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 50,
+      "y": 220
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF_E",
+      "2": "REF3_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R36",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 110,
+      "y": 220
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF3_CLAMP",
+      "2": "CH3_N"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D8",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 80,
+      "y": 235
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "REF3_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R37",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 240,
+      "y": 220
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF_E",
+      "2": "REF4_CLAMP"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "R38",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 300,
+      "y": 220
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "REF4_CLAMP",
+      "2": "CH4_N"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Input series protection; 1%, 0805"
+    }
+  },
+  {
+    "sheet": "Inputs",
+    "reference": "D9",
+    "symbol": "EEG_Custom:BAV199",
+    "value": "BAV199",
+    "position": {
+      "x": 270,
+      "y": 235
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23",
+    "nets": {
+      "1": "GND",
+      "2": "A5V",
+      "3": "REF4_CLAMP"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "BAV199,215",
+      "Manufacturer": "Nexperia",
+      "Notes": "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "J5",
+    "symbol": "Connector_Generic:Conn_02x06_Odd_Even",
+    "value": "EXTERNAL_ESP32_3V3",
+    "position": {
+      "x": 80,
+      "y": 90
+    },
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical",
+    "nets": {
+      "1": "GND",
+      "2": "DEV_3V3",
+      "3": "MCU_SCLK",
+      "4": "ADC_MISO",
+      "5": "MCU_MOSI",
+      "6": "MCU_CS",
+      "7": "ADC_DRDY",
+      "8": "ADC_RESET",
+      "9": "ADC_START",
+      "10": "VIN_SENSE",
+      "11": "USB_PRESENT",
+      "12": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "61301221121",
+      "Manufacturer": "Wurth Elektronik",
+      "Notes": "Cable header, NOT a dev-board plug-in socket. 3.3 V logic only."
+    },
+    "caption_position": {
+      "x": 70,
+      "y": 40
+    }
+  },
+  {
+    "sheet": "Controller",
+    "reference": "J7",
+    "symbol": "Connector_Generic:Conn_01x02",
+    "value": "DEV_POWER_LINK",
+    "position": {
+      "x": 235,
+      "y": 125
+    },
+    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
+    "nets": {
+      "1": "3V3",
+      "2": "DEV_3V3"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "61300211121",
+      "Manufacturer": "Wurth Elektronik",
+      "Notes": "Fit shunt to power external board through 3V3 pin. Remove before its own USB supply/programming."
+    },
+    "caption_position": {
+      "x": 240,
+      "y": 114
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "J6",
+    "symbol": "Connector:USB_C_Receptacle_USB2.0_16P",
+    "value": "USB_C_BENCH_POWER",
+    "position": {
+      "x": 65,
+      "y": 85
+    },
+    "footprint": "Connector_USB:USB_C_Receptacle_GCT_USB4105-xx-A_16P_TopMnt_Horizontal",
+    "nets": {
+      "A4": "USB_VBUS",
+      "A9": "USB_VBUS",
+      "B4": "USB_VBUS",
+      "B9": "USB_VBUS",
+      "A1": "GND",
+      "A12": "GND",
+      "B1": "GND",
+      "B12": "GND",
+      "S1": "GND",
+      "A5": "USB_CC1",
+      "B5": "USB_CC2"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "USB4105-GF-A",
+      "Manufacturer": "GCT",
+      "Notes": "5 V USB-C bench power only. No data/PD/charging. D+/D-/SBU intentionally NC."
+    },
+    "caption_position": {
+      "x": 65,
+      "y": 45
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "R39",
+    "symbol": "Device:R",
+    "value": "5.1k",
+    "position": {
+      "x": 130,
+      "y": 65
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "USB_CC1",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-075K1L",
+      "Manufacturer": "Yageo",
+      "Notes": "Independent Type-C sink Rd; no PD negotiation."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "R40",
+    "symbol": "Device:R",
+    "value": "5.1k",
+    "position": {
+      "x": 130,
+      "y": 95
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "USB_CC2",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-075K1L",
+      "Manufacturer": "Yageo",
+      "Notes": "Independent Type-C sink Rd; no PD negotiation."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "F2",
+    "symbol": "Device:Polyfuse",
+    "value": "0.75A_PTC",
+    "position": {
+      "x": 205,
+      "y": 65
+    },
+    "footprint": "Fuse:Fuse_1812_4532Metric",
+    "nets": {
+      "1": "USB_VBUS",
+      "2": "USB_FUSED"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "1812L075/24DR",
+      "Manufacturer": "Littelfuse",
+      "Notes": "USB input overcurrent response, not current negotiation."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "D10",
+    "symbol": "Device:D_Schottky",
+    "value": "SS14",
+    "position": {
+      "x": 260,
+      "y": 65
+    },
+    "footprint": "Diode_SMD:D_SMA",
+    "nets": {
+      "1": "BAT_PROTECTED",
+      "2": "USB_FUSED"
+    },
+    "rotation": 180,
+    "properties": {
+      "MPN": "SS14",
+      "Manufacturer": "Diodes Incorporated",
+      "Notes": "USB/battery diode OR prevents source backfeed."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "D12",
+    "symbol": "Device:D_TVS",
+    "value": "SMAJ5.0A",
+    "position": {
+      "x": 205,
+      "y": 100
+    },
+    "footprint": "Diode_SMD:D_SMA",
+    "nets": {
+      "1": "USB_VBUS",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "SMAJ5.0A",
+      "Manufacturer": "Diodes Incorporated",
+      "Notes": "VBUS transient suppressor. Does not qualify full USB interface."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "U5",
+    "symbol": "EEG_Custom:AP3031",
+    "value": "AP3031KTR-G1",
+    "position": {
+      "x": 190,
+      "y": 185
+    },
+    "footprint": "Package_TO_SOT_SMD:SOT-23-6",
+    "nets": {
+      "1": "BOOST_SW",
+      "2": "GND",
+      "3": "BOOST_FB",
+      "4": "BAT_SW",
+      "5": "BOOST9V",
+      "6": "BAT_SW"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "AP3031KTR-G1",
+      "Manufacturer": "Diodes Incorporated",
+      "Notes": "Low-current analog boost, nominal 9.04 V; NOT the external ESP32 supply."
+    },
+    "caption_position": {
+      "x": 190,
+      "y": 130
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "L2",
+    "symbol": "Device:L",
+    "value": "4.7uH",
+    "position": {
+      "x": 225,
+      "y": 150
+    },
+    "footprint": "Inductor_SMD:L_Bourns_SRP5030T",
+    "nets": {
+      "1": "BAT_SW",
+      "2": "BOOST_SW"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "SRP5030T-4R7M",
+      "Manufacturer": "Bourns",
+      "Notes": "Analog boost inductor; switch loop kept away from inputs."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "D11",
+    "symbol": "Device:D_Schottky",
+    "value": "SS14",
+    "position": {
+      "x": 270,
+      "y": 150
+    },
+    "footprint": "Diode_SMD:D_SMA",
+    "nets": {
+      "1": "BOOST9V",
+      "2": "BOOST_SW"
+    },
+    "rotation": 180,
+    "properties": {
+      "MPN": "SS14",
+      "Manufacturer": "Diodes Incorporated",
+      "Notes": "Analog boost rectifier."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "C37",
+    "symbol": "Device:C",
+    "value": "10u",
+    "position": {
+      "x": 140,
+      "y": 190
+    },
+    "footprint": "Capacitor_SMD:C_1206_3216Metric",
+    "nets": {
+      "1": "BAT_SW",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM31CR71C106KA12L",
+      "Manufacturer": "Murata",
+      "Notes": "Local boost input bypass."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "C38",
+    "symbol": "Device:C",
+    "value": "1u",
+    "position": {
+      "x": 370,
+      "y": 150
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "BOOST9V",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71E105KA99L",
+      "Manufacturer": "Murata",
+      "Notes": "Boost output ceramic; effective value/stability requires bench verification."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "R41",
+    "symbol": "Device:R",
+    "value": "442k",
+    "position": {
+      "x": 335,
+      "y": 175
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "BOOST9V",
+      "2": "BOOST_FB"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "RC0805FR-07442KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Feedback upper arm; 9.04 V nominal from 0.2 V reference."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "R42",
+    "symbol": "Device:R",
+    "value": "10k",
+    "position": {
+      "x": 335,
+      "y": 215
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "BOOST_FB",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "RC0805FR-0710KL",
+      "Manufacturer": "Yageo",
+      "Notes": "Feedback lower arm."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "R43",
+    "symbol": "Device:R",
+    "value": "330k",
+    "position": {
+      "x": 75,
+      "y": 210
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "USB_VBUS",
+      "2": "USB_PRESENT"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07330KL",
+      "Manufacturer": "Yageo",
+      "Notes": "USB presence analog divider, used to distinguish bench vs battery mode."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "R44",
+    "symbol": "Device:R",
+    "value": "100k",
+    "position": {
+      "x": 115,
+      "y": 210
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "USB_PRESENT",
+      "2": "GND"
+    },
+    "rotation": 90,
+    "properties": {
+      "MPN": "RC0805FR-07100KL",
+      "Manufacturer": "Yageo",
+      "Notes": "USB presence analog divider, used to distinguish bench vs battery mode."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "C40",
+    "symbol": "Device:C",
+    "value": "100n",
+    "position": {
+      "x": 95,
+      "y": 240
+    },
+    "footprint": "Capacitor_SMD:C_0805_2012Metric",
+    "nets": {
+      "1": "USB_PRESENT",
+      "2": "GND"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "GRM21BR71H104KA01L",
+      "Manufacturer": "Murata",
+      "Notes": "USB-present ADC settling/bypass."
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "#FLG05",
+    "symbol": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "position": {
+      "x": 45,
+      "y": 265
+    },
+    "footprint": "",
+    "nets": {
+      "1": "USB_VBUS"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "",
+      "Manufacturer": "",
+      "Notes": ""
+    }
+  },
+  {
+    "sheet": "USB",
+    "reference": "#FLG06",
+    "symbol": "power:PWR_FLAG",
+    "value": "PWR_FLAG",
+    "position": {
+      "x": 85,
+      "y": 265
+    },
+    "footprint": "",
+    "nets": {
+      "1": "BOOST9V"
+    },
+    "rotation": 0,
+    "properties": {
+      "MPN": "",
+      "Manufacturer": "",
+      "Notes": ""
+    }
+  }
+]

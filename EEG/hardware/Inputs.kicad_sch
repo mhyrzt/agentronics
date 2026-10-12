@@ -1,0 +1,4899 @@
+(kicad_sch
+  (version 20250114)
+  (generator "eeschema")
+  (generator_version "9.0")
+  (uuid "d008f036-9e90-5683-a94c-880876069b9d")
+  (paper "A3")
+  (title_block
+    (title "EEG learning prototype - Inputs")
+    (date "2026-10-13")
+    (rev "B - bench prototype")
+  )
+  (lib_symbols
+    (symbol "Connector_Generic:Conn_01x06"
+      (pin_names
+        (offset 1.016)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "Conn_01x06"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "Description" "Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "ki_keywords" "connector"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "ki_fp_filters" "Connector*:*_1x??_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (symbol "Conn_01x06_1_1"
+        (rectangle
+          (start -1.27 6.35)
+          (end 1.27 -8.89)
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type background)
+          )
+        )
+        (rectangle
+          (start -1.27 5.207)
+          (end 0 4.953)
+          (stroke
+            (width 0.1524)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start -1.27 2.667)
+          (end 0 2.413)
+          (stroke
+            (width 0.1524)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start -1.27 0.127)
+          (end 0 -0.127)
+          (stroke
+            (width 0.1524)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start -1.27 -2.413)
+          (end 0 -2.667)
+          (stroke
+            (width 0.1524)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start -1.27 -4.953)
+          (end 0 -5.207)
+          (stroke
+            (width 0.1524)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (rectangle
+          (start -1.27 -7.493)
+          (end 0 -7.747)
+          (stroke
+            (width 0.1524)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (pin passive line
+          (at -5.08 5.08 0)
+          (length 3.81)
+          (name "Pin_1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -5.08 2.54 0)
+          (length 3.81)
+          (name "Pin_2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -5.08 0 0)
+          (length 3.81)
+          (name "Pin_3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -5.08 -2.54 0)
+          (length 3.81)
+          (name "Pin_4"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -5.08 -5.08 0)
+          (length 3.81)
+          (name "Pin_5"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at -5.08 -7.62 0)
+          (length 3.81)
+          (name "Pin_6"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "Device:R"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 2.032 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "R"
+        (at 0 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" ""
+        (at -1.778 0 90)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "Description" "Resistor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "ki_keywords" "R res resistor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "ki_fp_filters" "R_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+    (symbol "EEG_Custom:BAV199"
+      (pin_names
+        (offset 0)
+        (hide yes)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 2.54 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Value" "BAV199"
+        (at 0 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+        (at 0 -5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+        (hide yes)
+      )
+      (property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/BAV199.pdf"
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+        (hide yes)
+      )
+      (property "Description" "Low leakage series diode pair: 1=A1, 2=K2, 3=K1/A2"
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+        )
+        (hide yes)
+      )
+      (symbol "BAV199_0_1"
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy -1.27 1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -3.81 -1.27)
+            (xy -3.81 1.27)
+            (xy -1.27 -0.0)
+            (xy -3.81 -1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -3.81 -0.0)
+            (xy -1.27 -0.0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 3.81 -1.27)
+            (xy 3.81 1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 -1.27)
+            (xy 1.27 1.27)
+            (xy 3.81 -0.0)
+            (xy 1.27 -1.27)
+          )
+          (stroke
+            (width 0.254)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy 1.27 -0.0)
+            (xy 3.81 -0.0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -1.27 0)
+            (xy 1.27 0)
+          )
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (circle
+          (center 0 0)
+          (radius 0.254)
+          (stroke
+            (width 0)
+            (type default)
+          )
+          (fill
+            (type outline)
+          )
+        )
+      )
+      (symbol "BAV199_1_1"
+        (pin passive line
+          (at -7.62 0 0)
+          (length 3.81)
+          (name "A1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 7.62 0 180)
+          (length 3.81)
+          (name "K2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 5.08 270)
+          (length 5.08)
+          (name "K1/A2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+    )
+    (symbol "Device:C"
+      (pin_numbers
+        (hide yes)
+      )
+      (pin_names
+        (offset 0.254)
+      )
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0.635 2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Value" "C"
+        (at 0.635 -2.54 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (justify left)
+        )
+      )
+      (property "Footprint" ""
+        (at 0.9652 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "Datasheet" "~"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "Description" "Unpolarized capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "ki_keywords" "cap capacitor"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (property "ki_fp_filters" "C_*"
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)
+          )
+          (hide yes)
+        )
+      )
+      (symbol "C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762)
+          )
+          (stroke
+            (width 0.508)
+            (type default)
+          )
+          (fill
+            (type none)
+          )
+        )
+      )
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.794)
+          (name "~"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)
+              )
+            )
+          )
+        )
+      )
+      (embedded_fonts no)
+    )
+  )
+  (symbol
+    (lib_id "Connector_Generic:Conn_01x06")
+    (at 44.45 39.37 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "dd0cfd21-d76c-561e-98b6-feb255ff4489")
+    (property "Reference" "J1"
+      (at 48.260000000000005 35.559999999999995 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "ELECTRODES"
+      (at 48.260000000000005 38.099999999999994 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Connector_JST:JST_XH_B6B-XH-A_1x06_P2.50mm_Vertical"
+      (at 48.260000000000005 40.63999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "B6B-XH-A"
+      (at 48.260000000000005 43.17999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "JST"
+      (at 48.260000000000005 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Electrode connector: channels 1-4, reference, bias. No ground electrode."
+      (at 48.260000000000005 48.25999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "J1")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 49.53 85.09 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "df4f8a1d-a780-57f6-a6e2-9342ccdc4960")
+    (property "Reference" "R1"
+      (at 49.53 80.01 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 49.53 82.55000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 49.53 85.09 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 49.53 87.63000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 49.53 90.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 49.53 92.71000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R1")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 110.49 85.09 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "aaa23ba8-cd44-5aa1-9059-bdb49690281f")
+    (property "Reference" "R2"
+      (at 110.49 80.01 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 110.49 82.55000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 110.49 85.09 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 110.49 87.63000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 110.49 90.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Secondary current limiting and differential RC filter"
+      (at 110.49 92.71000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R2")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 80.01 100.33 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f4cc3b89-6a83-53f1-a1f6-237f0156fd28")
+    (property "Reference" "D1"
+      (at 80.01 105.41 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 80.01 107.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 80.01 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 80.01 113.03 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 80.01 115.57 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 80.01 118.11 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D1")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:C")
+    (at 160.02 100.33 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "bd37b5d6-f906-587f-a198-b54be023feeb")
+    (property "Reference" "C1"
+      (at 163.83 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "4.7n"
+      (at 163.83 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 163.83 101.6 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "GRM21A5C1H472JA01D"
+      (at 163.83 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Murata"
+      (at 163.83 106.67999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "C0G differential RF filter, 50V, 5%"
+      (at 163.83 109.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "C1")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 240.03 85.09 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0e055f62-5b3f-5631-9734-8436baade140")
+    (property "Reference" "R3"
+      (at 240.03 80.01 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 240.03 82.55000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 240.03 85.09 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 240.03 87.63000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 240.03 90.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 240.03 92.71000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R3")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 299.72 85.09 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6ef75dfc-b11f-5e93-ab06-b87f092c6313")
+    (property "Reference" "R4"
+      (at 299.72 80.01 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 299.72 82.55000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 299.72 85.09 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 299.72 87.63000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 299.72 90.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Secondary current limiting and differential RC filter"
+      (at 299.72 92.71000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R4")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 270.51 100.33 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0ea32e54-ac51-531c-a176-5b2a1ba39117")
+    (property "Reference" "D2"
+      (at 270.51 105.41 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 270.51 107.95 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 270.51 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 270.51 113.03 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 270.51 115.57 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 270.51 118.11 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D2")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:C")
+    (at 350.52 100.33 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "26218ea8-68c8-5781-89eb-a53d94e68604")
+    (property "Reference" "C2"
+      (at 354.33 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "4.7n"
+      (at 354.33 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 354.33 101.6 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "GRM21A5C1H472JA01D"
+      (at 354.33 104.14 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Murata"
+      (at 354.33 106.67999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "C0G differential RF filter, 50V, 5%"
+      (at 354.33 109.22 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "C2")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 49.53 190.5 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f9702f8f-40a6-501f-ad06-7c54253b95bf")
+    (property "Reference" "R5"
+      (at 49.53 185.42 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 49.53 187.95999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 49.53 190.5 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 49.53 193.04 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 49.53 195.57999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 49.53 198.11999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R5")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 110.49 190.5 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9c5fd6b8-af5e-5983-9ea0-3fdecb284a0a")
+    (property "Reference" "R6"
+      (at 110.49 185.42 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 110.49 187.95999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 110.49 190.5 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 110.49 193.04 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 110.49 195.57999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Secondary current limiting and differential RC filter"
+      (at 110.49 198.11999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R6")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 80.01 204.47 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8beb7d81-fbdc-52fd-aee7-1e727787d9f3")
+    (property "Reference" "D3"
+      (at 80.01 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 80.01 212.09 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 80.01 214.63000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 80.01 217.17000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 80.01 219.71 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 80.01 222.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D3")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:C")
+    (at 160.02 204.47 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "53d92180-afd2-5fcb-bf79-e0edc952c65a")
+    (property "Reference" "C3"
+      (at 163.83 200.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "4.7n"
+      (at 163.83 203.2 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 163.83 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "GRM21A5C1H472JA01D"
+      (at 163.83 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Murata"
+      (at 163.83 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "C0G differential RF filter, 50V, 5%"
+      (at 163.83 213.35999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "C3")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 240.03 190.5 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7c0a6c4b-3d84-52e0-beb3-316ea57c5412")
+    (property "Reference" "R7"
+      (at 240.03 185.42 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 240.03 187.95999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 240.03 190.5 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 240.03 193.04 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 240.03 195.57999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 240.03 198.11999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R7")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 299.72 190.5 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "32f2d2ef-ffcb-559a-b540-e3a109b7327a")
+    (property "Reference" "R8"
+      (at 299.72 185.42 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 299.72 187.95999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 299.72 190.5 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 299.72 193.04 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 299.72 195.57999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Secondary current limiting and differential RC filter"
+      (at 299.72 198.11999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R8")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 270.51 204.47 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "81a3ff67-c55c-58e1-be03-3be26b6921c6")
+    (property "Reference" "D4"
+      (at 270.51 209.55 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 270.51 212.09 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 270.51 214.63000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 270.51 217.17000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 270.51 219.71 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 270.51 222.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D4")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:C")
+    (at 350.52 204.47 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7f23b30e-9d8a-56ce-abb0-39d6f79451a2")
+    (property "Reference" "C4"
+      (at 354.33 200.66 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "4.7n"
+      (at 354.33 203.2 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 354.33 205.74 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "GRM21A5C1H472JA01D"
+      (at 354.33 208.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Murata"
+      (at 354.33 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "C0G differential RF filter, 50V, 5%"
+      (at 354.33 213.35999999999999 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "C4")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 49.53 115.57000000000001 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "49acacbe-b016-5b53-bf98-8138b9d7992b")
+    (property "Reference" "R9"
+      (at 49.53 110.49000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 49.53 113.03000000000002 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 49.53 115.57000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 49.53 118.11000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 49.53 120.65 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 49.53 123.19000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R9")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 110.49 115.57000000000001 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fc9fcc14-0692-52bd-925b-902ba137fbea")
+    (property "Reference" "R10"
+      (at 110.49 110.49000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 110.49 113.03000000000002 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 110.49 115.57000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 110.49 118.11000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 110.49 120.65 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Secondary current limiting and differential RC filter"
+      (at 110.49 123.19000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R10")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 80.01 129.54 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "62e4ee35-cffc-5ca3-9260-a9855a51a6ac")
+    (property "Reference" "D5"
+      (at 80.01 134.62 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 80.01 137.16 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 80.01 139.70000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 80.01 142.24 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 80.01 144.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 80.01 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D5")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 144.78 35.56 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "d9de6ae1-ddcc-52dc-b4cc-2419f45a18c4")
+    (property "Reference" "R11"
+      (at 144.78 30.480000000000004 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "499k"
+      (at 144.78 33.02 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 144.78 35.56 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-07499KL"
+      (at 144.78 38.1 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 144.78 40.64 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Independent bias current limiting resistor"
+      (at 144.78 43.18000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R11")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 204.47 35.56 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ce362b9c-a929-5638-ad19-ff16098914b7")
+    (property "Reference" "R12"
+      (at 204.47 30.480000000000004 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "499k"
+      (at 204.47 33.02 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 204.47 35.56 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-07499KL"
+      (at 204.47 38.1 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 204.47 40.64 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Independent bias current limiting resistor"
+      (at 204.47 43.18000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R12")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 240.03 115.57000000000001 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ac7245b7-4de3-536c-b4e7-973e02953efc")
+    (property "Reference" "R33"
+      (at 240.03 110.49000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 240.03 113.03000000000002 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 240.03 115.57000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 240.03 118.11000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 240.03 120.65 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 240.03 123.19000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R33")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 299.72 115.57000000000001 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "86c6201f-2f37-5963-ad55-9a6338db8ce9")
+    (property "Reference" "R34"
+      (at 299.72 110.49000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 299.72 113.03000000000002 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 299.72 115.57000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 299.72 118.11000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 299.72 120.65 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 299.72 123.19000000000001 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R34")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 270.51 129.54 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f4150b02-ed07-5738-b4cd-cc83eba1fde5")
+    (property "Reference" "D7"
+      (at 270.51 134.62 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 270.51 137.16 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 270.51 139.70000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 270.51 142.24 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 270.51 144.78 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 270.51 147.32 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D7")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 49.53 219.71 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a159bf42-3e1c-554c-8cfc-34b37b472882")
+    (property "Reference" "R35"
+      (at 49.53 214.63 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 49.53 217.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 49.53 219.71 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 49.53 222.25 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 49.53 224.79 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 49.53 227.32999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R35")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 110.49 219.71 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "2d5a910a-e0af-5081-bcfe-49deacbb7b04")
+    (property "Reference" "R36"
+      (at 110.49 214.63 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 110.49 217.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 110.49 219.71 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 110.49 222.25 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 110.49 224.79 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 110.49 227.32999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R36")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 80.01 234.95000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f85012eb-deb5-5bb3-9940-47dbe326c590")
+    (property "Reference" "D8"
+      (at 80.01 240.03000000000003 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 80.01 242.57000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 80.01 245.11000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 80.01 247.65000000000003 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 80.01 250.19000000000003 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 80.01 252.73000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D8")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 240.03 219.71 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5f33e7a4-9e69-5197-9a09-9c1bd143e7f1")
+    (property "Reference" "R37"
+      (at 240.03 214.63 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 240.03 217.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 240.03 219.71 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 240.03 222.25 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 240.03 224.79 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 240.03 227.32999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R37")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "Device:R")
+    (at 299.72 219.71 90)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fc5b6834-2341-5e22-94a6-95232ea3d1e9")
+    (property "Reference" "R38"
+      (at 299.72 214.63 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "10k"
+      (at 299.72 217.17 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+      (at 299.72 219.71 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "RC0805FR-0710KL"
+      (at 299.72 222.25 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Yageo"
+      (at 299.72 224.79 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Input series protection; 1%, 0805"
+      (at 299.72 227.32999999999998 90)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "R38")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (symbol
+    (lib_id "EEG_Custom:BAV199")
+    (at 270.51 234.95000000000002 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c3fa70c0-5880-5d70-ae15-8ec129b817c5")
+    (property "Reference" "D9"
+      (at 270.51 240.03000000000003 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Value" "BAV199"
+      (at 270.51 242.57000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+      )
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+      (at 270.51 245.11000000000004 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "MPN" "BAV199,215"
+      (at 270.51 247.65000000000003 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Manufacturer" "Nexperia"
+      (at 270.51 250.19000000000003 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (property "Notes" "Low leakage rail clamp. Not a certified ESD or defibrillator protection circuit."
+      (at 270.51 252.73000000000002 0)
+      (effects
+        (font
+          (size 1.27 1.27)
+        )
+        (hide yes)
+      )
+    )
+    (instances
+      (project "EEG"
+        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536"
+          (reference "D9")
+          (unit 1)
+        )
+      )
+    )
+  )
+  (text "ELECTRODES / INPUT PROTECTION"
+    (at 25 15 0)
+    (effects
+      (font
+        (size 2.54 2.54)
+      )
+      (justify left)
+    )
+    (uuid "4d59781c-e7d2-5bc9-aa2c-77bb753e5a08")
+  )
+  (text "J1: channels 1-4, reference, bias"
+    (at 25 24 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "c7903cf7-03e7-59b2-ba4c-228b07a16472")
+  )
+  (text "Bias electrode: two independent series resistors"
+    (at 130 20 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "b3523ecf-e6ea-5a42-8c84-00b8b5f1b5df")
+  )
+  (junction
+    (at 148.59 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "0df84de2-c84b-5e13-a54d-9b6be2a0691a")
+  )
+  (junction
+    (at 175.26 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3b28ff02-1f64-5a2e-96b8-6c75cceadbf5")
+  )
+  (junction
+    (at 200.66 35.56)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3a57b022-45eb-573d-a82c-f0388be3b00a")
+  )
+  (global_label "BIAS_LIMIT"
+    (shape bidirectional)
+    (at 175.26 35.56 270)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+    )
+    (uuid "6b84c286-f33a-54e6-b2e4-35b5352f2e70")
+  )
+  (text "CHANNEL 1 / DIFFERENTIAL FILTER"
+    (at 30 62 0)
+    (effects
+      (font
+        (size 1.8 1.8)
+      )
+      (justify left)
+    )
+    (uuid "f14c217f-1029-58b5-a2ac-1575c31f10f7")
+  )
+  (text "Positive electrode above; shared REF branch below"
+    (at 30 69 0)
+    (effects
+      (font
+        (size 1.0 1.0)
+      )
+      (justify left)
+    )
+    (uuid "608f4363-a6a6-5163-8a5b-4de91a102f69")
+  )
+  (junction
+    (at 53.34 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "d26de700-7e34-5956-8cd7-a6b0870bcce3")
+  )
+  (junction
+    (at 80.01 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "8806f912-cfd3-5456-bcb5-a40696a46ae8")
+  )
+  (junction
+    (at 106.68 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "91dc343d-25b3-5198-b90e-de257fbb6484")
+  )
+  (global_label "CH1_CLAMP"
+    (shape bidirectional)
+    (at 80.01 95.25 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "39734731-53be-52e9-adfc-4191c5cc5227")
+  )
+  (junction
+    (at 114.3 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "0e18a241-0eab-5541-98d3-81b10758d33e")
+  )
+  (junction
+    (at 160.02 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "fe2b2d3a-24be-5968-b64e-b0a64decd326")
+  )
+  (junction
+    (at 185.42 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "91c7b6f5-2dbf-5767-9c9b-d330be981acb")
+  )
+  (global_label "CH1_ADC"
+    (shape bidirectional)
+    (at 185.42 85.09 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "56705bbb-f588-509a-9485-bebcbaa4d0a3")
+  )
+  (junction
+    (at 53.34 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "13084e2f-980b-5ed5-837d-4ac256a8e9be")
+  )
+  (junction
+    (at 80.01 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "ce1b333c-45f8-55e1-be52-3e93a491e66c")
+  )
+  (junction
+    (at 106.68 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "baa7b79f-b6b4-565b-b40b-f0b46a23bc15")
+  )
+  (global_label "REF_CLAMP"
+    (shape bidirectional)
+    (at 80.01 124.46 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "e36e1301-f8b3-5056-b231-ae1e2bac4b0c")
+  )
+  (junction
+    (at 114.3 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "76671a4f-d967-5d88-8891-8d4028ae2d6c")
+  )
+  (junction
+    (at 160.02 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "9222aa70-05c8-5516-b02a-aef8497983cf")
+  )
+  (junction
+    (at 185.42 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "349c03a6-7501-576c-8415-cccc0dd45975")
+  )
+  (global_label "CH1_N"
+    (shape bidirectional)
+    (at 185.42 115.57 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "b34c833c-4d7f-596e-9970-065f45d9d20d")
+  )
+  (text "CHANNEL 2 / DIFFERENTIAL FILTER"
+    (at 220 62 0)
+    (effects
+      (font
+        (size 1.8 1.8)
+      )
+      (justify left)
+    )
+    (uuid "8c00a4f6-6d8d-5dbc-b6b2-f85be3712f7a")
+  )
+  (text "Positive electrode above; shared REF branch below"
+    (at 220 69 0)
+    (effects
+      (font
+        (size 1.0 1.0)
+      )
+      (justify left)
+    )
+    (uuid "94bc0a47-dffc-5564-8180-3b6fb7289ae2")
+  )
+  (junction
+    (at 243.84 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "44a1a7f1-3092-526c-b818-e2bdfb81708f")
+  )
+  (junction
+    (at 270.51 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "91410cae-0037-594f-9d04-09a995eaa09b")
+  )
+  (junction
+    (at 295.91 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e6e7f1a5-c0bc-53b0-ae7f-c677b749921a")
+  )
+  (global_label "CH2_CLAMP"
+    (shape bidirectional)
+    (at 270.51 95.25 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "743d41fc-64a0-5def-b168-b1e5e62e1eba")
+  )
+  (junction
+    (at 303.53 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3ea15848-a06e-5376-b9b7-20e1dff2487f")
+  )
+  (junction
+    (at 350.52 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e1f897aa-a342-5f4b-8533-b2f046874b3d")
+  )
+  (junction
+    (at 374.65 85.09)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "7d55e842-6b90-5af4-829f-c2a5dc6b0329")
+  )
+  (global_label "CH2_ADC"
+    (shape bidirectional)
+    (at 374.65 85.09 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "5b92a465-f9a7-5473-a35f-7e6310b01f22")
+  )
+  (junction
+    (at 243.84 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "d06a1055-2727-50c6-8b3e-064b7930c399")
+  )
+  (junction
+    (at 270.51 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "4376edcf-d768-5f9e-afa6-c62d929e28af")
+  )
+  (junction
+    (at 295.91 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "a22ecca6-5917-5104-9a10-0cf5e367f4dc")
+  )
+  (global_label "REF2_CLAMP"
+    (shape bidirectional)
+    (at 270.51 124.46 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "82dbfda3-833f-5add-8bb7-1facb04ac988")
+  )
+  (junction
+    (at 303.53 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "bacf5262-b5b6-5865-95b8-0cba210559f7")
+  )
+  (junction
+    (at 350.52 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "12c49589-339c-5439-8903-77cb886a9784")
+  )
+  (junction
+    (at 374.65 115.57)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "4ae3e9de-f2f9-5861-83b8-bfc03ed995e1")
+  )
+  (global_label "CH2_N"
+    (shape bidirectional)
+    (at 374.65 115.57 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "3ae2870d-a84f-5c73-9b8f-a556fdb713e5")
+  )
+  (text "CHANNEL 3 / DIFFERENTIAL FILTER"
+    (at 30 167 0)
+    (effects
+      (font
+        (size 1.8 1.8)
+      )
+      (justify left)
+    )
+    (uuid "677f6621-d76d-53f0-bebb-84da65043529")
+  )
+  (text "Positive electrode above; shared REF branch below"
+    (at 30 174 0)
+    (effects
+      (font
+        (size 1.0 1.0)
+      )
+      (justify left)
+    )
+    (uuid "977ccf15-6f31-5b2a-be2f-4e879040e09a")
+  )
+  (junction
+    (at 53.34 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "72197e20-21b2-5450-b0ac-3b9dfe7dd15c")
+  )
+  (junction
+    (at 80.01 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "c2886781-f95c-5882-808c-d1927716994c")
+  )
+  (junction
+    (at 106.68 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "b2942b25-866f-50e8-bd9d-def96660f35d")
+  )
+  (global_label "CH3_CLAMP"
+    (shape bidirectional)
+    (at 80.01 199.39 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "6db179fb-49eb-5374-8395-90380bc0789f")
+  )
+  (junction
+    (at 114.3 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "8db952a0-379c-54b0-81e4-6fa89284c681")
+  )
+  (junction
+    (at 160.02 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "bff1163e-a931-51d7-9964-8225ffad73f7")
+  )
+  (junction
+    (at 185.42 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "fb89245e-23fd-5081-b9e5-bfc675bb3c9e")
+  )
+  (global_label "CH3_ADC"
+    (shape bidirectional)
+    (at 185.42 190.5 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "51a7d768-c49f-5e75-91fe-eb6bbcf0d991")
+  )
+  (junction
+    (at 53.34 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "80ae9179-4823-584a-94f0-5fc5eac038ab")
+  )
+  (junction
+    (at 80.01 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "3d28c0bc-96df-5cab-88aa-8c78db694a1e")
+  )
+  (junction
+    (at 106.68 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "7570c4da-15f6-592d-b5da-bc377ae0ba3e")
+  )
+  (global_label "REF3_CLAMP"
+    (shape bidirectional)
+    (at 80.01 229.87 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "1bbba049-707d-5608-aec9-bdb8f6fd0413")
+  )
+  (junction
+    (at 114.3 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "6791a994-20aa-5faf-9946-ad32cf525585")
+  )
+  (junction
+    (at 160.02 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "339bc779-00af-59fb-8fb4-251adb589504")
+  )
+  (junction
+    (at 185.42 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "26fc4d0a-efd1-54b8-a9a5-782a40f4789c")
+  )
+  (global_label "CH3_N"
+    (shape bidirectional)
+    (at 185.42 219.71 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "b172670d-dfc7-5553-bcd7-fd7be76297e7")
+  )
+  (text "CHANNEL 4 / DIFFERENTIAL FILTER"
+    (at 220 167 0)
+    (effects
+      (font
+        (size 1.8 1.8)
+      )
+      (justify left)
+    )
+    (uuid "5a89e52e-500f-59f8-bc32-44066761d484")
+  )
+  (text "Positive electrode above; shared REF branch below"
+    (at 220 174 0)
+    (effects
+      (font
+        (size 1.0 1.0)
+      )
+      (justify left)
+    )
+    (uuid "26a23b16-7dad-5a79-a716-32f97d28f4aa")
+  )
+  (junction
+    (at 243.84 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "4b3d8a7e-9f40-5a21-b4e9-fc5e56b509a1")
+  )
+  (junction
+    (at 270.51 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "bb8ea0b7-dd57-5eca-b60a-610a38ec0de7")
+  )
+  (junction
+    (at 295.91 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "48e60713-177f-5d52-b676-b4879be0435d")
+  )
+  (global_label "CH4_CLAMP"
+    (shape bidirectional)
+    (at 270.51 199.39 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "951a98fa-5b4a-5399-963e-82bd8b314e50")
+  )
+  (junction
+    (at 303.53 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "78b23a39-8d69-558f-a38f-355c362c99dd")
+  )
+  (junction
+    (at 350.52 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "46c20bff-708b-5362-b8eb-86144e249654")
+  )
+  (junction
+    (at 374.65 190.5)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "f37d6b7b-bb31-5174-b39e-29aec6f350cb")
+  )
+  (global_label "CH4_ADC"
+    (shape bidirectional)
+    (at 374.65 190.5 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "a5f12478-d5be-5611-9d21-5f0ce6628d38")
+  )
+  (junction
+    (at 243.84 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "6a965ba6-52ed-58f4-982a-0efc49abc361")
+  )
+  (junction
+    (at 270.51 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e595dd9c-73fd-5fef-bf87-5292201ac79e")
+  )
+  (junction
+    (at 295.91 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "94e57151-e235-56db-acdf-05d1b210ddbb")
+  )
+  (global_label "REF4_CLAMP"
+    (shape bidirectional)
+    (at 270.51 229.87 180)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "8226b73e-d2b4-5dc4-b3cc-3638dd018bdc")
+  )
+  (junction
+    (at 303.53 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "a0595fdc-9bc8-5dc6-b8ed-96d1cc9bca02")
+  )
+  (junction
+    (at 350.52 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "e80c82c5-3c69-5ab9-8b70-db4233a4ce0b")
+  )
+  (junction
+    (at 374.65 219.71)
+    (diameter 0)
+    (color 0 0 0 0)
+    (uuid "5d736666-f26a-521e-be20-99d1bbef6088")
+  )
+  (global_label "CH4_N"
+    (shape bidirectional)
+    (at 374.65 219.71 0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "29c822a0-7e57-5107-bd07-f670d3d6246c")
+  )
+  (text "20 kOhm per input branch / 4.7 nF differential / rail clamps are not a certified patient interface"
+    (at 25 270 0)
+    (effects
+      (font
+        (size 1.0 1.0)
+      )
+      (justify left)
+    )
+    (uuid "39d6d257-9ff1-5de7-99cd-fde52d4a5197")
+  )
+  (text "[I0] REF compares all channels; BIAS is a driven output."
+    (at 240 24.0 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "99a6fa29-94e2-5ec3-9565-5eb3f6259539")
+  )
+  (text "J1 has no circuit-ground electrode. Trace CH1_E to CH1_ADC."
+    (at 240 27.5 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "73648c9c-30c8-538d-8dd7-94dd159cd2f4")
+  )
+  (text "BIAS current path: R11 + R12 = 998 kOhm; bench validation pending."
+    (at 240 31.0 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "4833c44b-5792-5f14-8d81-33beb19db3e7")
+  )
+  (text "[I1] R1/R9 limit current toward the clamps; R2/R10 add isolation."
+    (at 30 145.0 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "9337bd1a-1c99-5a0f-8868-8d6aeab709ae")
+  )
+  (text "D1/D5: low-leakage rail clamps; leakage creates input offset."
+    (at 30 148.5 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "a05e1157-47ec-5668-8099-652c58213480")
+  )
+  (text "C1 bridges P/N: 40 kOhm differential + 4.7 nF gives about 847 Hz."
+    (at 30 152.0 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "cc8f43a5-fa0c-52c9-a5c0-b9db9b7bb64e")
+  )
+  (text "This is high-frequency attenuation, not the final EEG bandpass."
+    (at 30 155.5 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "d3af0a3f-04cc-5dda-b711-dc66fdb7e24d")
+  )
+  (text "[I2] REF_E fans out into four separate protected branches."
+    (at 220 145.0 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "d9167757-fd4c-592c-87b6-710d4084704c")
+  )
+  (text "Each channel has its own negative input and differential capacitor."
+    (at 220 148.5 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "0e4fbc23-01c4-519f-9b91-57487402d96b")
+  )
+  (text "A disturbance on the shared reference can affect several channels."
+    (at 220 152.0 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "bfbe4b0b-f663-50fa-974e-334499152263")
+  )
+  (text "Channels 3/4 repeat this topology. Clamps do not certify safety."
+    (at 220 155.5 0)
+    (effects
+      (font
+        (size 1.15 1.15)
+      )
+      (justify left)
+    )
+    (uuid "44a4cde3-bb0b-5dc7-a1cb-42bda8a182f8")
+  )
+  (wire
+    (pts
+      (xy 148.59 35.56)
+      (xy 175.26 35.56)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d9b79110-9f63-5ca4-9829-c53c34eaf1cc")
+  )
+  (wire
+    (pts
+      (xy 175.26 35.56)
+      (xy 200.66 35.56)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "3d9e8b75-18a6-574e-ba4b-326afa317abd")
+  )
+  (wire
+    (pts
+      (xy 80.01 85.09)
+      (xy 80.01 95.25)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f438a390-0d86-5808-bd5f-4f4645e611eb")
+  )
+  (wire
+    (pts
+      (xy 53.34 85.09)
+      (xy 80.01 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "88263f10-e8d0-52f3-b15e-dffaf1800520")
+  )
+  (wire
+    (pts
+      (xy 80.01 85.09)
+      (xy 106.68 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "615b67b7-4b38-5b6b-ba3e-1b8bd95d54f4")
+  )
+  (wire
+    (pts
+      (xy 160.02 85.09)
+      (xy 160.02 96.52)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "cca644ba-9a30-5af3-a436-15361d28c42c")
+  )
+  (wire
+    (pts
+      (xy 114.3 85.09)
+      (xy 160.02 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d9a5c8bd-389e-51fc-8773-81466c7fc8ab")
+  )
+  (wire
+    (pts
+      (xy 160.02 85.09)
+      (xy 185.42 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "1c7d6a16-0058-516c-94c4-09cfa09fd5db")
+  )
+  (wire
+    (pts
+      (xy 80.01 115.57)
+      (xy 80.01 124.46)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "18980313-d3b1-59c3-9bb5-410d7a658476")
+  )
+  (wire
+    (pts
+      (xy 53.34 115.57)
+      (xy 80.01 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "64d41641-40d2-5aa0-af7b-510f983a4363")
+  )
+  (wire
+    (pts
+      (xy 80.01 115.57)
+      (xy 106.68 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "633b0559-5ad2-5b7f-b265-d0d9be28111a")
+  )
+  (wire
+    (pts
+      (xy 160.02 104.14)
+      (xy 160.02 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f8484711-3355-5f0a-ba41-a37e6f92c8ab")
+  )
+  (wire
+    (pts
+      (xy 114.3 115.57)
+      (xy 160.02 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "58406236-5b43-5fae-acf1-17c4b3dadae6")
+  )
+  (wire
+    (pts
+      (xy 160.02 115.57)
+      (xy 185.42 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "c6d23c17-f7e3-5501-81ae-59b16ac45c76")
+  )
+  (wire
+    (pts
+      (xy 270.51 85.09)
+      (xy 270.51 95.25)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "67ec6f12-6dab-5de7-bc4b-9053b4b8f30b")
+  )
+  (wire
+    (pts
+      (xy 243.84 85.09)
+      (xy 270.51 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b286cad9-3517-54ca-87f4-09f1077d2e71")
+  )
+  (wire
+    (pts
+      (xy 270.51 85.09)
+      (xy 295.91 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b4b7e7d1-7242-53a7-81cb-b04f5f00e690")
+  )
+  (wire
+    (pts
+      (xy 350.52 85.09)
+      (xy 350.52 96.52)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "cbd82042-2dac-5687-857f-c1b5e981a3fb")
+  )
+  (wire
+    (pts
+      (xy 303.53 85.09)
+      (xy 350.52 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "e7b4845b-009a-5f98-bd63-8f6082878f33")
+  )
+  (wire
+    (pts
+      (xy 350.52 85.09)
+      (xy 374.65 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b1a46dc0-e165-591e-8eb3-7b00bd8da1d9")
+  )
+  (wire
+    (pts
+      (xy 270.51 115.57)
+      (xy 270.51 124.46)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b49771c4-6c20-5a9c-89ea-e34bd3c6727b")
+  )
+  (wire
+    (pts
+      (xy 243.84 115.57)
+      (xy 270.51 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "3cef56c6-fa34-5571-8fe3-4241aa79c102")
+  )
+  (wire
+    (pts
+      (xy 270.51 115.57)
+      (xy 295.91 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f64acedf-74e8-5c32-b4ee-bc54b845fcee")
+  )
+  (wire
+    (pts
+      (xy 350.52 104.14)
+      (xy 350.52 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "6afad57c-6e62-54d2-884b-239dc279c14c")
+  )
+  (wire
+    (pts
+      (xy 303.53 115.57)
+      (xy 350.52 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "5c66ea2f-a949-51cf-ac8d-6d8b5c2d02c2")
+  )
+  (wire
+    (pts
+      (xy 350.52 115.57)
+      (xy 374.65 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "950b956b-4c4c-511b-8283-e61a33c51234")
+  )
+  (wire
+    (pts
+      (xy 80.01 190.5)
+      (xy 80.01 199.39)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "86d0a595-f71f-5cf3-b1ab-afce3bf791e3")
+  )
+  (wire
+    (pts
+      (xy 53.34 190.5)
+      (xy 80.01 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "90b9c55e-76b4-50cd-b72d-d49cf10c6024")
+  )
+  (wire
+    (pts
+      (xy 80.01 190.5)
+      (xy 106.68 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "95cbf384-8dea-59e4-8e7d-dfd69aae2722")
+  )
+  (wire
+    (pts
+      (xy 160.02 190.5)
+      (xy 160.02 200.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "4d48b19f-33f8-56e9-a842-7638a67f3fff")
+  )
+  (wire
+    (pts
+      (xy 114.3 190.5)
+      (xy 160.02 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "5a2e11f6-b1fb-508f-a088-86d2f725f2d0")
+  )
+  (wire
+    (pts
+      (xy 160.02 190.5)
+      (xy 185.42 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "e492d263-5ee7-58fb-9c06-e565940d9372")
+  )
+  (wire
+    (pts
+      (xy 80.01 219.71)
+      (xy 80.01 229.87)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "1ea61849-1316-52a8-87f8-c2ee89ed7480")
+  )
+  (wire
+    (pts
+      (xy 53.34 219.71)
+      (xy 80.01 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a1ebaa6c-02b0-5dcf-8422-2ac635259c95")
+  )
+  (wire
+    (pts
+      (xy 80.01 219.71)
+      (xy 106.68 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "c07b8e34-7816-56c5-be91-d5529e8477c9")
+  )
+  (wire
+    (pts
+      (xy 160.02 208.28)
+      (xy 160.02 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "41c69e1b-f1f5-5c92-a1ba-4fc7d74f7f9e")
+  )
+  (wire
+    (pts
+      (xy 114.3 219.71)
+      (xy 160.02 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "be536fbd-8265-54e3-8edb-9323ee6e153c")
+  )
+  (wire
+    (pts
+      (xy 160.02 219.71)
+      (xy 185.42 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "92ce4f80-91a0-5c5b-8334-39a9961ec279")
+  )
+  (wire
+    (pts
+      (xy 270.51 190.5)
+      (xy 270.51 199.39)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "34b71e04-5811-587b-b49b-35bfaa0d7adc")
+  )
+  (wire
+    (pts
+      (xy 243.84 190.5)
+      (xy 270.51 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a292ee72-7b51-546c-8ea9-55856b3fba21")
+  )
+  (wire
+    (pts
+      (xy 270.51 190.5)
+      (xy 295.91 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "fc1f026f-24b2-5a04-a820-83c69eb1efd8")
+  )
+  (wire
+    (pts
+      (xy 350.52 190.5)
+      (xy 350.52 200.66)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "1b0877ec-4445-5586-a1f1-30531aac16fa")
+  )
+  (wire
+    (pts
+      (xy 303.53 190.5)
+      (xy 350.52 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "405ae0c2-a2d4-5e0b-a004-fb00281f87df")
+  )
+  (wire
+    (pts
+      (xy 350.52 190.5)
+      (xy 374.65 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "7cab5c67-81f4-5778-b4c1-db0a9d8da4c8")
+  )
+  (wire
+    (pts
+      (xy 270.51 219.71)
+      (xy 270.51 229.87)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a51b394f-1835-5c0e-b6be-5b40e0cf6a6d")
+  )
+  (wire
+    (pts
+      (xy 243.84 219.71)
+      (xy 270.51 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "426943bd-53d2-5bd1-a53c-dc95f0bfa45e")
+  )
+  (wire
+    (pts
+      (xy 270.51 219.71)
+      (xy 295.91 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "956f8648-a14c-5abd-9f9a-580da9f39d78")
+  )
+  (wire
+    (pts
+      (xy 350.52 208.28)
+      (xy 350.52 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "33f9f020-350d-536d-bb8c-7c7ddc1383d8")
+  )
+  (wire
+    (pts
+      (xy 303.53 219.71)
+      (xy 350.52 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "8e82eb59-0d2e-59f4-823b-776cd962bec4")
+  )
+  (wire
+    (pts
+      (xy 350.52 219.71)
+      (xy 374.65 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "c7fd7d33-13fb-5555-848f-c6bceafc91ea")
+  )
+  (wire
+    (pts
+      (xy 39.37 34.29)
+      (xy 33.02 34.29)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "cd5663fd-1787-535d-ab27-615394b7a0ee")
+  )
+  (global_label "CH1_E"
+    (shape bidirectional)
+    (at 33.02 34.29 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "07d134f1-f2b7-5638-8f34-aa9429ece556")
+  )
+  (wire
+    (pts
+      (xy 39.37 36.83)
+      (xy 33.02 36.83)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f41b8f2a-5ba7-5535-80fb-ca8eef3ae575")
+  )
+  (global_label "CH2_E"
+    (shape bidirectional)
+    (at 33.02 36.83 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "2f26d745-55c8-5aa1-bd6e-8ede9a8c2a95")
+  )
+  (wire
+    (pts
+      (xy 39.37 39.37)
+      (xy 33.02 39.37)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "0a6c53ca-557e-5580-a41f-f1f6790afc38")
+  )
+  (global_label "CH3_E"
+    (shape bidirectional)
+    (at 33.02 39.37 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "932a97d8-e229-533f-9bae-65d01f1e68f3")
+  )
+  (wire
+    (pts
+      (xy 39.37 41.91)
+      (xy 33.02 41.91)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "da653ad7-bace-5861-a69f-28e05b2ad9f9")
+  )
+  (global_label "CH4_E"
+    (shape bidirectional)
+    (at 33.02 41.91 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "d097208f-c4af-51a2-9f55-dd5a060d2394")
+  )
+  (wire
+    (pts
+      (xy 39.37 44.45)
+      (xy 33.02 44.45)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "1ca2177c-9a9a-5286-8262-ceeb8fe97375")
+  )
+  (global_label "REF_E"
+    (shape bidirectional)
+    (at 33.02 44.45 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "8ab1ced3-bfd5-5e38-ba05-94982a299aac")
+  )
+  (wire
+    (pts
+      (xy 39.37 46.99)
+      (xy 33.02 46.99)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "147cc1df-def9-54c9-9bd7-3d335e8b0eb0")
+  )
+  (global_label "BIAS_E"
+    (shape bidirectional)
+    (at 33.02 46.99 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "91e6986c-2641-5bfe-94c5-89a47be88450")
+  )
+  (wire
+    (pts
+      (xy 45.72 85.09)
+      (xy 39.37 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "fb3f2bdc-a012-5f54-867e-56f2f805951a")
+  )
+  (global_label "CH1_E"
+    (shape bidirectional)
+    (at 39.37 85.09 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "14b31ef0-bdb7-587d-b932-217ffbb876c8")
+  )
+  (wire
+    (pts
+      (xy 72.39 100.33)
+      (xy 66.04 100.33)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b257e9fd-6d87-5f45-81b0-78ed8d99d6a6")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 66.04 100.33 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "b145a118-b9e3-5817-8c1e-bb5c49f4e98f")
+  )
+  (wire
+    (pts
+      (xy 87.63 100.33)
+      (xy 93.98 100.33)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "85ab5799-e353-5aa5-94cb-ebfec02642d3")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 93.98 100.33 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "9c226b11-a9b0-5709-ac87-1e82763e319d")
+  )
+  (wire
+    (pts
+      (xy 236.22 85.09)
+      (xy 229.87 85.09)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "04854edf-4762-58ad-819e-fc2b64ee256a")
+  )
+  (global_label "CH2_E"
+    (shape bidirectional)
+    (at 229.87 85.09 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "0fde040a-25a5-5cf7-b238-bc84310b8f58")
+  )
+  (wire
+    (pts
+      (xy 262.89 100.33)
+      (xy 256.54 100.33)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "9453d90b-3859-548d-a6e7-2eaa2387fba1")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 256.54 100.33 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "43baec45-0235-58d5-9732-ece2722ab152")
+  )
+  (wire
+    (pts
+      (xy 278.13 100.33)
+      (xy 284.48 100.33)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f1f425a7-45d3-5fee-930a-6ed626cb5899")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 284.48 100.33 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "c23229f3-606e-5265-939d-cc1d93d641e7")
+  )
+  (wire
+    (pts
+      (xy 45.72 190.5)
+      (xy 39.37 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "2f610411-c685-5d43-8b57-2762bd207a50")
+  )
+  (global_label "CH3_E"
+    (shape bidirectional)
+    (at 39.37 190.5 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "1aa80e4c-d6b7-5930-be31-19e4513d72c3")
+  )
+  (wire
+    (pts
+      (xy 72.39 204.47)
+      (xy 66.04 204.47)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "3f27deec-6316-54dc-afbd-cb31524f3f2c")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 66.04 204.47 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "0fae9e1b-5128-50a5-80fb-05267ec1929e")
+  )
+  (wire
+    (pts
+      (xy 87.63 204.47)
+      (xy 93.98 204.47)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "a31c6f2a-edda-50dc-a6bd-093e79ac46e9")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 93.98 204.47 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "bd9ab479-3b0d-5c7d-a4da-ca65b7b4dd38")
+  )
+  (wire
+    (pts
+      (xy 236.22 190.5)
+      (xy 229.87 190.5)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "9e4f9a4f-7fe0-5f48-afea-820b98f57dcb")
+  )
+  (global_label "CH4_E"
+    (shape bidirectional)
+    (at 229.87 190.5 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "4ce68680-a68e-5cd8-b6cf-f6bb12b875e9")
+  )
+  (wire
+    (pts
+      (xy 262.89 204.47)
+      (xy 256.54 204.47)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "ec3ee0e4-4e72-5235-97ff-9099f1b9d6c3")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 256.54 204.47 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "1e4c8981-a53e-5071-ae61-fad439020037")
+  )
+  (wire
+    (pts
+      (xy 278.13 204.47)
+      (xy 284.48 204.47)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "df67dd55-a771-5d7f-bdd4-684375c9c8e4")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 284.48 204.47 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "a7e734df-7e92-5fa6-9325-c42c4e2f935d")
+  )
+  (wire
+    (pts
+      (xy 45.72 115.57)
+      (xy 39.37 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "9ec7d248-d365-58e6-89a2-7bd75ede99ac")
+  )
+  (global_label "REF_E"
+    (shape bidirectional)
+    (at 39.37 115.57 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "3bfa37c4-9e03-566d-a349-ec5d101f85f1")
+  )
+  (wire
+    (pts
+      (xy 72.39 129.54)
+      (xy 66.04 129.54)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "54b56bad-eb7b-553f-a974-3e1b54bd1380")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 66.04 129.54 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "5a15dffe-80af-5468-b6ff-0084f06cccbf")
+  )
+  (wire
+    (pts
+      (xy 87.63 129.54)
+      (xy 93.98 129.54)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "2c902a1c-c2cb-5ae2-b603-02c04ce27254")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 93.98 129.54 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "c8cb3035-fb54-5534-8df7-0c738129dc6c")
+  )
+  (wire
+    (pts
+      (xy 140.97 35.56)
+      (xy 134.62 35.56)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "dcb2b191-beb9-54de-919f-941d3620114a")
+  )
+  (global_label "BIAS_OUT"
+    (shape bidirectional)
+    (at 134.62 35.56 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "c7352051-ab40-5ebd-b822-5c9386752080")
+  )
+  (wire
+    (pts
+      (xy 208.28 35.56)
+      (xy 214.63 35.56)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d7113396-8801-58bf-86bc-136e569ba475")
+  )
+  (global_label "BIAS_E"
+    (shape bidirectional)
+    (at 214.63 35.56 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "609d3ed0-3a93-51ee-aa6f-629a152a64cd")
+  )
+  (wire
+    (pts
+      (xy 236.22 115.57)
+      (xy 229.87 115.57)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "51ea6844-f4dd-54ac-92fc-433472d4c8bf")
+  )
+  (global_label "REF_E"
+    (shape bidirectional)
+    (at 229.87 115.57 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "03de2e1f-4275-5669-93d8-9b62d6673289")
+  )
+  (wire
+    (pts
+      (xy 262.89 129.54)
+      (xy 256.54 129.54)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "b6bea6c6-3349-5e4c-876f-fbb0d68f5db5")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 256.54 129.54 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "61089448-679b-5aa3-ba44-2d0a93d1b6ab")
+  )
+  (wire
+    (pts
+      (xy 278.13 129.54)
+      (xy 284.48 129.54)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "f505b5d1-46b9-552d-a9ac-c005054cd0f5")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 284.48 129.54 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "012dd41c-f258-5f02-9e93-42e7e75bfae9")
+  )
+  (wire
+    (pts
+      (xy 45.72 219.71)
+      (xy 39.37 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d45ac20e-e30d-583c-8728-795ff32a47cc")
+  )
+  (global_label "REF_E"
+    (shape bidirectional)
+    (at 39.37 219.71 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "87620528-ca32-5e70-9ba9-11af08ecd5d0")
+  )
+  (wire
+    (pts
+      (xy 72.39 234.95)
+      (xy 66.04 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "4cbbae6e-0fc0-5675-a2ab-3d730ef217b3")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 66.04 234.95 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "a7c7e1e6-0d46-5db7-be0e-ed1a48993729")
+  )
+  (wire
+    (pts
+      (xy 87.63 234.95)
+      (xy 93.98 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "cdfe255d-cd00-59b4-bbe9-4cd3996acfeb")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 93.98 234.95 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "85673a71-8003-5fa8-8aca-3435780e01d2")
+  )
+  (wire
+    (pts
+      (xy 236.22 219.71)
+      (xy 229.87 219.71)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "597f5870-7820-5a2c-a796-c9ca2110a094")
+  )
+  (global_label "REF_E"
+    (shape bidirectional)
+    (at 229.87 219.71 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "f47f2e49-7705-5f0b-9355-69b1734ab751")
+  )
+  (wire
+    (pts
+      (xy 262.89 234.95)
+      (xy 256.54 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d5503355-5faa-59be-9d5e-c2f329f9be3b")
+  )
+  (global_label "GND"
+    (shape bidirectional)
+    (at 256.54 234.95 180.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify right)
+    )
+    (uuid "c3247ed1-14da-5de4-9d68-02add6a2f6ad")
+  )
+  (wire
+    (pts
+      (xy 278.13 234.95)
+      (xy 284.48 234.95)
+    )
+    (stroke
+      (width 0)
+      (type default)
+    )
+    (uuid "d74b64fa-475c-5104-bb69-ca6aeb6116fc")
+  )
+  (global_label "A5V"
+    (shape bidirectional)
+    (at 284.48 234.95 0.0)
+    (effects
+      (font
+        (size 1.27 1.27)
+      )
+      (justify left)
+    )
+    (uuid "bacd1888-b3ee-5cd9-b808-226bb294afc2")
+  )
+)

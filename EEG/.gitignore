@@ -1,0 +1,12 @@
+# Local history and transient artifacts
+/archive/
+/EEG-backups/
+__pycache__/
+*.py[cod]
+~*.lck
+*.kicad_prl
+
+# Review inputs and legacy exports retained with revision warnings
+!/exports/EEG.net
+!/exports/BOM.csv
+!/exports/fabrication/positions.csv
