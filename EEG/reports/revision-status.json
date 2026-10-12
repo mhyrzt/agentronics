@@ -1,0 +1,55 @@
+{
+  "revision": "B",
+  "erc_errors": 0,
+  "erc_warnings": 0,
+  "manifest_pin_mismatches": 0,
+  "physical_components": 103,
+  "retained_pin_changes": [
+    {
+      "pin": "C33:1",
+      "before": "BAT_SW",
+      "after": "BOOST9V"
+    },
+    {
+      "pin": "U4:1",
+      "before": "BAT_SW",
+      "after": "BOOST9V"
+    },
+    {
+      "pin": "U4:3",
+      "before": "BAT_SW",
+      "after": "BOOST9V"
+    },
+    {
+      "pin": "C27:1",
+      "before": "VBAT_SENSE",
+      "after": "VIN_SENSE"
+    },
+    {
+      "pin": "R31:2",
+      "before": "VBAT_SENSE",
+      "after": "VIN_SENSE"
+    },
+    {
+      "pin": "R32:1",
+      "before": "VBAT_SENSE",
+      "after": "VIN_SENSE"
+    }
+  ],
+  "pcb_status": "square 80 x 80 mm; channel order and 4 mm input/reference grids; aligned ADC support rows and power headers; DRC violations 0, unconnected 0, schematic parity issues 0",
+  "export_status": "MCP PDF/BOM export blocked by automatic approval HTTP 404. PDF/BOM/fabrication packages remain Revision A; awaiting permission to use local CLI.",
+  "fabrication_ready": false,
+  "cad_pad_net_mismatches": 0,
+  "pcb_outline_mm": [
+    80,
+    80
+  ],
+  "copper_layers": 2,
+  "maximum_pcb_outline_mm": [
+    100,
+    100
+  ],
+  "mounting_holes": 4,
+  "single_layer_conversion": false,
+  "placement_report": "placement-alignment.json"
+}

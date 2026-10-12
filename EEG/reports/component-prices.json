@@ -1,0 +1,422 @@
+{
+  "date_checked": "2026-10-13",
+  "currency": "USD",
+  "purpose": "Planning estimate; not manufacturing BOM",
+  "electrical_quantity": 103,
+  "subtotal_usd": "78.29",
+  "parts": [
+    {
+      "mpn": "ADS1299-4PAG",
+      "references": [
+        "U1"
+      ],
+      "quantity": 1,
+      "unit_usd": "44.99",
+      "extended_usd": "44.99",
+      "basis": "Q: PAGR cut-tape packaging",
+      "url": "https://www.digikey.com/en/products/detail/texas-instruments/ADS1299-4PAGR/6590707"
+    },
+    {
+      "mpn": "B6B-XH-A",
+      "references": [
+        "J1"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.18",
+      "extended_usd": "0.18",
+      "basis": "Q",
+      "url": "https://www.tme.com/us/en-us/details/b6b-xh-a/raster-signal-connectors-2-50mm/jst/"
+    },
+    {
+      "mpn": "RC0805FR-0710KL",
+      "references": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        "R8",
+        "R9",
+        "R10",
+        "R19",
+        "R20",
+        "R23",
+        "R33",
+        "R34",
+        "R35",
+        "R36",
+        "R37",
+        "R38",
+        "R42"
+      ],
+      "quantity": 20,
+      "unit_usd": "0.10",
+      "extended_usd": "2.00",
+      "basis": "Q",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "BAV199,215",
+      "references": [
+        "D1",
+        "D2",
+        "D3",
+        "D4",
+        "D5",
+        "D7",
+        "D8",
+        "D9"
+      ],
+      "quantity": 8,
+      "unit_usd": "0.18",
+      "extended_usd": "1.44",
+      "basis": "Q",
+      "url": "https://www.digikey.com/es/products/detail/nexperia-usa-inc/BAV199-215/763223"
+    },
+    {
+      "mpn": "GRM21A5C1H472JA01D",
+      "references": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ],
+      "quantity": 4,
+      "unit_usd": "0.54",
+      "extended_usd": "2.16",
+      "basis": "C: C0805C472J5GACTU; original MPN unverified",
+      "url": "https://www.digikey.com/en/products/detail/yageo/CC0805JRNPO9BN472/17008272"
+    },
+    {
+      "mpn": "RC0805FR-07499KL",
+      "references": [
+        "R11",
+        "R12"
+      ],
+      "quantity": 2,
+      "unit_usd": "0.10",
+      "extended_usd": "0.20",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "RC0805FR-071ML",
+      "references": [
+        "R13"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.10",
+      "extended_usd": "0.10",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "GRM21A5C1H102JA01D",
+      "references": [
+        "C5"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.65",
+      "extended_usd": "0.65",
+      "basis": "E: 1 nF C0G allowance; original MPN unverified",
+      "url": ""
+    },
+    {
+      "mpn": "T491D107K010AT",
+      "references": [
+        "C6"
+      ],
+      "quantity": 1,
+      "unit_usd": "1.50",
+      "extended_usd": "1.50",
+      "basis": "E: rounded sourcing allowance",
+      "url": "https://www.findchips.com/search/T491D107K010AT"
+    },
+    {
+      "mpn": "GRM21BR71E105KA99L",
+      "references": [
+        "C7",
+        "C8",
+        "C10",
+        "C13",
+        "C14",
+        "C15",
+        "C16",
+        "C17",
+        "C18",
+        "C21",
+        "C38"
+      ],
+      "quantity": 11,
+      "unit_usd": "0.30",
+      "extended_usd": "3.30",
+      "basis": "E: 1 \u00b5F X7R allowance; original obsolete",
+      "url": "https://www.digikey.com/es/products/detail/wec/GRM21BR71E105KA99L/26461505"
+    },
+    {
+      "mpn": "GRM21BR71H104KA01L",
+      "references": [
+        "C9",
+        "C12",
+        "C20",
+        "C22",
+        "C25",
+        "C27",
+        "C29",
+        "C30",
+        "C36",
+        "C40"
+      ],
+      "quantity": 10,
+      "unit_usd": "0.15",
+      "extended_usd": "1.50",
+      "basis": "C: 885012207098; original obsolete",
+      "url": "https://www.digikey.com.br/pt/products/detail/murata-electronics/GRM21BR71H104KA01L/586718"
+    },
+    {
+      "mpn": "GRM31CR71C106KA12L",
+      "references": [
+        "C11",
+        "C19",
+        "C24",
+        "C28",
+        "C33",
+        "C35",
+        "C37"
+      ],
+      "quantity": 7,
+      "unit_usd": "0.99",
+      "extended_usd": "6.93",
+      "basis": "C: GRM31CR71C106KAC7L; original obsolete",
+      "url": "https://www.digikey.com/es/products/detail/murata-electronics/GRM31CR71C106KAC7L/740043"
+    },
+    {
+      "mpn": "RC0805JR-070RL",
+      "references": [
+        "R14"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.10",
+      "extended_usd": "0.10",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "RC0805FR-07100KL",
+      "references": [
+        "R15",
+        "R16",
+        "R17",
+        "R18",
+        "R21",
+        "R22",
+        "R32",
+        "R44"
+      ],
+      "quantity": 8,
+      "unit_usd": "0.10",
+      "extended_usd": "0.80",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "RC0805FR-0733RL",
+      "references": [
+        "R24",
+        "R25",
+        "R26"
+      ],
+      "quantity": 3,
+      "unit_usd": "0.10",
+      "extended_usd": "0.30",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "RC0805FR-07330KL",
+      "references": [
+        "R31",
+        "R43"
+      ],
+      "quantity": 2,
+      "unit_usd": "0.10",
+      "extended_usd": "0.20",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "B2B-XH-A",
+      "references": [
+        "J2"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.10",
+      "extended_usd": "0.10",
+      "basis": "Q",
+      "url": "https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-XH-A/1651045"
+    },
+    {
+      "mpn": "1812L075/24DR",
+      "references": [
+        "F1",
+        "F2"
+      ],
+      "quantity": 2,
+      "unit_usd": "1.00",
+      "extended_usd": "2.00",
+      "basis": "E: PTC allowance",
+      "url": ""
+    },
+    {
+      "mpn": "SS14",
+      "references": [
+        "D6",
+        "D10",
+        "D11"
+      ],
+      "quantity": 3,
+      "unit_usd": "0.40",
+      "extended_usd": "1.20",
+      "basis": "E: SMA Schottky allowance; vendor suffix needs confirmation",
+      "url": ""
+    },
+    {
+      "mpn": "61300211121",
+      "references": [
+        "J4",
+        "J7"
+      ],
+      "quantity": 2,
+      "unit_usd": "0.25",
+      "extended_usd": "0.50",
+      "basis": "E: two-pin header allowance",
+      "url": ""
+    },
+    {
+      "mpn": "AP63203WU-7",
+      "references": [
+        "U3"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.89",
+      "extended_usd": "0.89",
+      "basis": "Q: availability needs recheck",
+      "url": "https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426"
+    },
+    {
+      "mpn": "SRP5030T-4R7M",
+      "references": [
+        "L1",
+        "L2"
+      ],
+      "quantity": 2,
+      "unit_usd": "1.00",
+      "extended_usd": "2.00",
+      "basis": "Q",
+      "url": "https://www.digikey.com/en/products/detail/bourns-inc/SRP5030T-4R7M/3986084"
+    },
+    {
+      "mpn": "GRM31CR61E226KE15L",
+      "references": [
+        "C31",
+        "C32"
+      ],
+      "quantity": 2,
+      "unit_usd": "0.48",
+      "extended_usd": "0.96",
+      "basis": "C: CL31A226KAHNNNE; original obsolete",
+      "url": "https://www.digikey.com/en/products/detail/murata-electronics/GRM31CR61E226KE15L/2334878"
+    },
+    {
+      "mpn": "LP2985AIM5-5.0/NOPB",
+      "references": [
+        "U4"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.72",
+      "extended_usd": "0.72",
+      "basis": "Q",
+      "url": "https://www.mouser.com/ProductDetail/Texas-Instruments/LP2985AIM5-5.0-NOPB?qs=7lkVKPoqpbYsAhhQ4Pn4Tg%3D%3D"
+    },
+    {
+      "mpn": "GRM21A5C1H103JA01D",
+      "references": [
+        "C34"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.75",
+      "extended_usd": "0.75",
+      "basis": "E: 10 nF C0G allowance; original MPN unverified",
+      "url": ""
+    },
+    {
+      "mpn": "61301221121",
+      "references": [
+        "J5"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.79",
+      "extended_usd": "0.79",
+      "basis": "Q",
+      "url": "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61301221121/4846846"
+    },
+    {
+      "mpn": "USB4105-GF-A",
+      "references": [
+        "J6"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.80",
+      "extended_usd": "0.80",
+      "basis": "Q",
+      "url": "https://www.digikey.com/en/products/detail/gct/USB4105-GF-A/11198441"
+    },
+    {
+      "mpn": "RC0805FR-075K1L",
+      "references": [
+        "R39",
+        "R40"
+      ],
+      "quantity": 2,
+      "unit_usd": "0.10",
+      "extended_usd": "0.20",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "SMAJ5.0A",
+      "references": [
+        "D12"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.60",
+      "extended_usd": "0.60",
+      "basis": "E: TVS allowance; vendor suffix needs confirmation",
+      "url": ""
+    },
+    {
+      "mpn": "AP3031KTR-G1",
+      "references": [
+        "U5"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.33",
+      "extended_usd": "0.33",
+      "basis": "Q",
+      "url": "https://www.digikey.com/es/products/detail/diodes-incorporated/AP3031KTR-G1/4470853"
+    },
+    {
+      "mpn": "RC0805FR-07442KL",
+      "references": [
+        "R41"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.10",
+      "extended_usd": "0.10",
+      "basis": "E: allowance based on 10 k\u03a9 series sample",
+      "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    }
+  ]
+}

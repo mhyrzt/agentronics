@@ -1,0 +1,80 @@
+{
+  "passed": false,
+  "electrical_components": 103,
+  "electrical_footprints": 103,
+  "numbered_electrical_pad_instances": 319,
+  "unique_schematic_pins": 316,
+  "bom_grouped_lines": 29,
+  "bom_total_quantity": 95,
+  "intentional_revision_net_changes": [
+    {
+      "pin": "C33:1",
+      "before": "BAT_SW",
+      "after": "BOOST9V"
+    },
+    {
+      "pin": "U4:1",
+      "before": "BAT_SW",
+      "after": "BOOST9V"
+    },
+    {
+      "pin": "U4:3",
+      "before": "BAT_SW",
+      "after": "BOOST9V"
+    },
+    {
+      "pin": "C27:1",
+      "before": "VBAT_SENSE",
+      "after": "VIN_SENSE"
+    },
+    {
+      "pin": "R31:2",
+      "before": "VBAT_SENSE",
+      "after": "VIN_SENSE"
+    },
+    {
+      "pin": "R32:1",
+      "before": "VBAT_SENSE",
+      "after": "VIN_SENSE"
+    }
+  ],
+  "removed_components": [
+    "C23",
+    "C26",
+    "J3",
+    "R27",
+    "R28",
+    "R29",
+    "R30",
+    "SW2",
+    "SW3",
+    "U2"
+  ],
+  "added_components": [
+    "C37",
+    "C38",
+    "C40",
+    "D10",
+    "D11",
+    "D12",
+    "F2",
+    "J5",
+    "J6",
+    "J7",
+    "L2",
+    "R39",
+    "R40",
+    "R41",
+    "R42",
+    "R43",
+    "R44",
+    "U5"
+  ],
+  "errors": [
+    {
+      "bom_quantity": 95,
+      "schematic_components": 103
+    }
+  ],
+  "scope": "CAD connectivity and metadata only; no assembled electrical validation"
+}
