@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/mahyar/Projects/agentronics/EEG/hardware/EEG.kicad_sch</source>
-    <date>2026-10-13T00:34:05+0330</date>
+    <date>2026-10-13T13:44:49+0330</date>
     <tool>Eeschema 9.0.9.1-1.fc43</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -1660,6 +1660,29 @@
       <sheetpath names="/Power/" tstamps="/4dc0247a-13d1-5f40-b1d0-b2a9ca174417/"/>
       <tstamps>8221c365-fa8d-542a-ad21-3a75f7d0dba4</tstamps>
     </comp>
+    <comp ref="D13">
+      <value>PWR_GREEN</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <datasheet>https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Kingbright</field>
+        <field name="MPN">APT2012LZGCK</field>
+        <field name="Notes">Steady 3V3 indicator only; does not prove A5V, ADC operation or battery protection.</field>
+        <field name="Footprint">LED_SMD:LED_0805_2012Metric</field>
+        <field name="Datasheet">https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf</field>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Manufacturer" value="Kingbright"/>
+      <property name="MPN" value="APT2012LZGCK"/>
+      <property name="Notes" value="Steady 3V3 indicator only; does not prove A5V, ADC operation or battery protection."/>
+      <property name="Sheetname" value="Power"/>
+      <property name="Sheetfile" value="Power.kicad_sch"/>
+      <property name="ki_keywords" value="LED diode"/>
+      <property name="ki_fp_filters" value="LED* LED_SMD:* LED_THT:*"/>
+      <sheetpath names="/Power/" tstamps="/4dc0247a-13d1-5f40-b1d0-b2a9ca174417/"/>
+      <tstamps>70636f58-b33c-53b7-8ef8-bf8da9c8ea5b</tstamps>
+    </comp>
     <comp ref="F1">
       <value>0.75A_PTC</value>
       <footprint>Fuse:Fuse_1812_4532Metric</footprint>
@@ -1747,6 +1770,28 @@
       <property name="ki_fp_filters" value="Choke_* *Coil* Inductor_* L_*"/>
       <sheetpath names="/Power/" tstamps="/4dc0247a-13d1-5f40-b1d0-b2a9ca174417/"/>
       <tstamps>cb8528ce-fa04-5e2b-a4bf-91781f6bb481</tstamps>
+    </comp>
+    <comp ref="R45">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <fields>
+        <field name="Manufacturer">Yageo</field>
+        <field name="MPN">RC0805FR-071KL</field>
+        <field name="Notes">DC power indicator current limit; about 0.65 mA using nominal LED Vf at 2 mA.</field>
+        <field name="Footprint">Resistor_SMD:R_0805_2012Metric</field>
+        <field name="Datasheet"/>
+        <field name="Description"/>
+      </fields>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Manufacturer" value="Yageo"/>
+      <property name="MPN" value="RC0805FR-071KL"/>
+      <property name="Notes" value="DC power indicator current limit; about 0.65 mA using nominal LED Vf at 2 mA."/>
+      <property name="Sheetname" value="Power"/>
+      <property name="Sheetfile" value="Power.kicad_sch"/>
+      <property name="ki_keywords" value="R res resistor"/>
+      <property name="ki_fp_filters" value="R_*"/>
+      <sheetpath names="/Power/" tstamps="/4dc0247a-13d1-5f40-b1d0-b2a9ca174417/"/>
+      <tstamps>854940db-d4e1-50c8-b675-cafddcd99250</tstamps>
     </comp>
     <comp ref="U3">
       <value>AP63203WU-7</value>
@@ -2214,7 +2259,7 @@
       <fields>
         <field name="MPN">61301221121</field>
         <field name="Manufacturer">Wurth Elektronik</field>
-        <field name="Notes">Cable header, NOT a dev-board plug-in socket. 3.3 V logic only.</field>
+        <field name="Notes">External ESP32 cable; pin 2 permanently powered from 3V3. Disconnect its 3V3 cable before powering external board by USB.</field>
         <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description"/>
@@ -2222,35 +2267,13 @@
       <libsource lib="Connector_Generic" part="Conn_02x06_Odd_Even" description="Generic connector, double row, 02x06, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="MPN" value="61301221121"/>
       <property name="Manufacturer" value="Wurth Elektronik"/>
-      <property name="Notes" value="Cable header, NOT a dev-board plug-in socket. 3.3 V logic only."/>
+      <property name="Notes" value="External ESP32 cable; pin 2 permanently powered from 3V3. Disconnect its 3V3 cable before powering external board by USB."/>
       <property name="Sheetname" value="Controller"/>
       <property name="Sheetfile" value="Controller.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
       <property name="ki_fp_filters" value="Connector*:*_2x??_*"/>
       <sheetpath names="/Controller/" tstamps="/59f1ce6a-9eab-50a0-8c46-0fa9b6c7ac44/"/>
       <tstamps>a5d86e22-5931-59af-8434-cb680ec28c1e</tstamps>
-    </comp>
-    <comp ref="J7">
-      <value>DEV_POWER_LINK</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
-      <fields>
-        <field name="MPN">61300211121</field>
-        <field name="Manufacturer">Wurth Elektronik</field>
-        <field name="Notes">Fit shunt to power external board through 3V3 pin. Remove before its own USB supply/programming.</field>
-        <field name="Footprint">Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</field>
-        <field name="Datasheet"/>
-        <field name="Description"/>
-      </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="MPN" value="61300211121"/>
-      <property name="Manufacturer" value="Wurth Elektronik"/>
-      <property name="Notes" value="Fit shunt to power external board through 3V3 pin. Remove before its own USB supply/programming."/>
-      <property name="Sheetname" value="Controller"/>
-      <property name="Sheetfile" value="Controller.kicad_sch"/>
-      <property name="ki_keywords" value="connector"/>
-      <property name="ki_fp_filters" value="Connector*:*_1x??_*"/>
-      <sheetpath names="/Controller/" tstamps="/59f1ce6a-9eab-50a0-8c46-0fa9b6c7ac44/"/>
-      <tstamps>de76319d-78ff-5bf4-ac10-a994f4ecbe75</tstamps>
     </comp>
     <comp ref="R24">
       <value>33</value>
@@ -2644,6 +2667,27 @@
         <pin num="2" name="2" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+        <field name="Footprint"/>
+        <field name="Datasheet">~</field>
+        <field name="Description">Light emitting diode</field>
+        <field name="Sim.Pins">1=K 2=A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Device" part="Polyfuse">
       <description>Resettable fuse, polymeric positive temperature coefficient</description>
       <docs>~</docs>
@@ -2789,11 +2833,12 @@
       <node ref="C25" pin="1" pintype="passive"/>
       <node ref="C31" pin="1" pintype="passive"/>
       <node ref="C32" pin="1" pintype="passive"/>
-      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R19" pin="1" pintype="passive"/>
       <node ref="R20" pin="1" pintype="passive"/>
       <node ref="R23" pin="1" pintype="passive"/>
+      <node ref="R45" pin="1" pintype="passive"/>
       <node ref="U1" pin="48" pinfunction="DVDD" pintype="power_in"/>
       <node ref="U1" pin="50" pinfunction="DVDD" pintype="passive"/>
       <node ref="U3" pin="1" pinfunction="FB" pintype="input"/>
@@ -3040,11 +3085,7 @@
       <node ref="R38" pin="2" pintype="passive"/>
       <node ref="U1" pin="9" pinfunction="IN4N" pintype="input"/>
     </net>
-    <net code="46" name="DEV_3V3" class="Default">
-      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
-      <node ref="J7" pin="2" pinfunction="Pin_2" pintype="passive"/>
-    </net>
-    <net code="47" name="GND" class="Default">
+    <net code="46" name="GND" class="Default">
       <node ref="C10" pin="2" pintype="passive"/>
       <node ref="C11" pin="2" pintype="passive"/>
       <node ref="C12" pin="2" pintype="passive"/>
@@ -3078,6 +3119,7 @@
       <node ref="C9" pin="2" pintype="passive"/>
       <node ref="D1" pin="1" pinfunction="A1" pintype="passive"/>
       <node ref="D12" pin="2" pinfunction="A2" pintype="passive"/>
+      <node ref="D13" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="D2" pin="1" pinfunction="A1" pintype="passive"/>
       <node ref="D3" pin="1" pinfunction="A1" pintype="passive"/>
       <node ref="D4" pin="1" pinfunction="A1" pintype="passive"/>
@@ -3123,21 +3165,25 @@
       <node ref="U4" pin="2" pinfunction="GND" pintype="power_in"/>
       <node ref="U5" pin="2" pinfunction="GND" pintype="power_in"/>
     </net>
-    <net code="48" name="LDO_BP" class="Default">
+    <net code="47" name="LDO_BP" class="Default">
       <node ref="C34" pin="1" pintype="passive"/>
       <node ref="U4" pin="4" pinfunction="BP" pintype="input"/>
     </net>
-    <net code="49" name="MCU_CS" class="Default">
+    <net code="48" name="MCU_CS" class="Default">
       <node ref="J5" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="R26" pin="1" pintype="passive"/>
     </net>
-    <net code="50" name="MCU_MOSI" class="Default">
+    <net code="49" name="MCU_MOSI" class="Default">
       <node ref="J5" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R25" pin="1" pintype="passive"/>
     </net>
-    <net code="51" name="MCU_SCLK" class="Default">
+    <net code="50" name="MCU_SCLK" class="Default">
       <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="R24" pin="1" pintype="passive"/>
+    </net>
+    <net code="51" name="PWR_LED_A" class="Default">
+      <node ref="D13" pin="2" pinfunction="A" pintype="passive"/>
+      <node ref="R45" pin="2" pintype="passive"/>
     </net>
     <net code="52" name="REF2_CLAMP" class="Default">
       <node ref="D7" pin="3" pinfunction="K1/A2" pintype="passive"/>
