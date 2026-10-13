@@ -1,0 +1,43 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-13T14:05:44+0330",
+    "included_severities": [
+        "error",
+        "warning"
+    ],
+    "kicad_version": "9.0.9",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc",
+            "violations": []
+        },
+        {
+            "path": "/Inputs/",
+            "uuid_path": "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/9de2ccb7-e1ef-5a39-a84c-3840f6255536",
+            "violations": []
+        },
+        {
+            "path": "/Frontend/",
+            "uuid_path": "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/d498b82e-e033-57b5-a07c-157fb0c18924",
+            "violations": []
+        },
+        {
+            "path": "/Power/",
+            "uuid_path": "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/4dc0247a-13d1-5f40-b1d0-b2a9ca174417",
+            "violations": []
+        },
+        {
+            "path": "/USB/",
+            "uuid_path": "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/4835678f-226c-54ee-bf9e-796dfd3fb38e",
+            "violations": []
+        },
+        {
+            "path": "/Controller/",
+            "uuid_path": "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/59f1ce6a-9eab-50a0-8c46-0fa9b6c7ac44",
+            "violations": []
+        }
+    ],
+    "source": "EEG.kicad_sch"
+}

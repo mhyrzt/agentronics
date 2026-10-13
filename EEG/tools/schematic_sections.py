@@ -107,13 +107,17 @@ def draw_sections(tree, pins, sheet, String, effects, uid):
         group('LDO_BP',[('U4',4),('C34',1)],'y',y,(grid(195),y),0)
         group('GND',[('C33',2),('U4',2),('C34',2),('C35',2),('C36',2)],'y',235,(grid(215),grid(235)),270)
         title('Power flags / ERC declarations',25,255,1.0)
+        title('3V3 POWER INDICATOR / steady DC',285,252,1.0)
+        y=point(('R45',2))[1]
+        group('PWR_LED_A',[('R45',2),('D13',2)],'y',y,(grid(330),y),270)
+        title('[P5] R45 = 1 kOhm; LED indicates 3V3 only, not analog readiness.',235,275,1.0)
         title('J4 shunt enables power; remove shunt or unplug battery for storage',235,55,1.0)
     elif sheet=='Controller':
         title('EXTERNAL ESP32 / CABLE INTERFACE',25,15,2.54)
         title('J5 is a signal cable header, not a plug-in dev-board socket',25,24,1.27)
         title('SPI series damping / 3.3 V logic',110,45,1.27)
         title('Local interface bypass',235,45,1.27)
-        title('Optional external-board power / REMOVE before its own USB',190,110,1.0)
+        title('Automatic external-board power / disconnect power wire before its USB',190,110,1.0)
         title('Selected input voltage monitor / ratio 4.3',225,150,1.27)
         group('3V3',[('C24',1),('C25',1)],'y',60,(grid(275),grid(60)),90)
         group('GND',[('C24',2),('C25',2)],'y',85,(grid(275),grid(85)),270)
@@ -211,8 +215,8 @@ def draw_sections(tree, pins, sheet, String, effects, uid):
             'Program through the external board USB, with electrodes disconnected.',
         ])
         note(25, 220, [
-            '[C3] Fit J7 only to power the dev board from the EEG 3.3 V rail.',
-            'Remove J7 before powering that board from its own USB.',
+            '[C3] J5 pin 2 is permanently supplied by the EEG 3.3 V rail.',
+            'Disconnect the J5 pin 2 power cable before its own USB.',
             'Do not feed a dev-board 5 V pin from this 3.3 V output.',
             'VIN_SENSE measures BAT_SW; USB_PRESENT identifies USB bench power.',
         ])

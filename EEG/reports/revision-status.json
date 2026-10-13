@@ -3,7 +3,7 @@
   "erc_errors": 0,
   "erc_warnings": 0,
   "manifest_pin_mismatches": 0,
-  "physical_components": 103,
+  "physical_components": 104,
   "retained_pin_changes": [
     {
       "pin": "C33:1",
@@ -36,13 +36,13 @@
       "after": "VIN_SENSE"
     }
   ],
-  "pcb_status": "square 80 x 80 mm; channel order and 4 mm input/reference grids; aligned ADC support rows and power headers; DRC violations 0, unconnected 0, schematic parity issues 0",
-  "export_status": "MCP PDF/BOM export blocked by automatic approval HTTP 404. PDF/BOM/fabrication packages remain Revision A; awaiting permission to use local CLI.",
+  "pcb_status": "centered square 60 x 60 mm; ADC at local (0,0), A4 sheet center; electrode and external ESP32 connector pin arrays centered vertically; USB-C bottom and battery top; J7 removed and J5 pin 2 directly powered by 3V3; zero courtyard overlaps, boundary violations, DRC violations, unconnected items and schematic parity issues",
+  "export_status": "Regenerated centered Revision B schematic/assembly PDFs, previews, 104-part BOM, Gerbers, drills and positions; CAD connectivity audit passes.",
   "fabrication_ready": false,
   "cad_pad_net_mismatches": 0,
   "pcb_outline_mm": [
-    80,
-    80
+    60,
+    60
   ],
   "copper_layers": 2,
   "maximum_pcb_outline_mm": [
@@ -51,5 +51,29 @@
   ],
   "mounting_holes": 4,
   "single_layer_conversion": false,
-  "placement_report": "placement-alignment.json"
+  "placement_report": "placement-alignment.json",
+  "power_indicator": {
+    "reference": "D13",
+    "resistor": "R45",
+    "rail": "3V3",
+    "mode": "steady DC",
+    "estimated_current_ma": 0.65,
+    "scope": "3V3 indication only"
+  },
+  "cad_package_ready": true,
+  "fabrication_readiness_note": "Resolve obsolete or unverified capacitor MPNs and review component substitutions before procurement; assembled validation pending.",
+  "layout_origin_mm": [
+    0,
+    0
+  ],
+  "adc_position_mm": [
+    0,
+    0
+  ],
+  "external_esp32_power": "J5 pin 2 directly tied to 3V3; J7 removed; disconnect power wire before ESP32 USB supply",
+  "absolute_page_center_mm": [
+    148.5,
+    105
+  ],
+  "coordinate_note": "Board centered inside A4 sheet; ADC is local (0,0) at grid/drill origin, absolute (148.5,105) mm"
 }

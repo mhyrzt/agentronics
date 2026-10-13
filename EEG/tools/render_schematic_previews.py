@@ -22,6 +22,7 @@ excerpts = {
     "buck-supply": ("Power", 25, 65, 340, 95),
     "analog-supply": ("Power", 25, 155, 340, 96),
     "controller-header": ("Controller", 22, 23, 200, 230),
+    "power-indicator": ("Power", 230, 248, 170, 32),
     "battery-monitor": ("Controller", 225, 145, 175, 120),
 }
 # Borderless exports keep title blocks out of the learning excerpts.
@@ -51,4 +52,4 @@ with tempfile.TemporaryDirectory(prefix="eeg-schematic-excerpts-") as folder:
         target = base / (name + ".svg")
         ET.ElementTree(root).write(target, encoding="utf-8", xml_declaration=True)
         subprocess.run(["rsvg-convert", "-w", "2000", "-o", str(target.with_suffix(".png")), str(target)], check=True)
-print("Rendered six full schematic pages and nine circuit excerpts.")
+print("Rendered six full schematic pages and ten circuit excerpts.")

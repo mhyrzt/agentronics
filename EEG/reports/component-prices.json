@@ -2,8 +2,8 @@
   "date_checked": "2026-10-13",
   "currency": "USD",
   "purpose": "Planning estimate; not manufacturing BOM",
-  "electrical_quantity": 103,
-  "subtotal_usd": "78.29",
+  "electrical_quantity": 104,
+  "subtotal_usd": "78.64",
   "parts": [
     {
       "mpn": "ADS1299-4PAG",
@@ -285,12 +285,11 @@
     {
       "mpn": "61300211121",
       "references": [
-        "J4",
-        "J7"
+        "J4"
       ],
-      "quantity": 2,
+      "quantity": 1,
       "unit_usd": "0.25",
-      "extended_usd": "0.50",
+      "extended_usd": "0.25",
       "basis": "E: two-pin header allowance",
       "url": ""
     },
@@ -417,6 +416,28 @@
       "extended_usd": "0.10",
       "basis": "E: allowance based on 10 k\u03a9 series sample",
       "url": "https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535"
+    },
+    {
+      "mpn": "RC0805FR-071KL",
+      "references": [
+        "R45"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.10",
+      "extended_usd": "0.10",
+      "basis": "E: resistor-series planning allowance",
+      "url": ""
+    },
+    {
+      "mpn": "APT2012LZGCK",
+      "references": [
+        "D13"
+      ],
+      "quantity": 1,
+      "unit_usd": "0.50",
+      "extended_usd": "0.50",
+      "basis": "E: LED planning allowance; quote pending",
+      "url": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf"
     }
   ]
 }

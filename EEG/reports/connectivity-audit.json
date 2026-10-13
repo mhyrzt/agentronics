@@ -1,11 +1,11 @@
 {
-  "passed": false,
-  "electrical_components": 103,
-  "electrical_footprints": 103,
-  "numbered_electrical_pad_instances": 319,
-  "unique_schematic_pins": 316,
-  "bom_grouped_lines": 29,
-  "bom_total_quantity": 95,
+  "passed": true,
+  "electrical_components": 104,
+  "electrical_footprints": 104,
+  "numbered_electrical_pad_instances": 321,
+  "unique_schematic_pins": 318,
+  "bom_grouped_lines": 33,
+  "bom_total_quantity": 104,
   "intentional_revision_net_changes": [
     {
       "pin": "C33:1",
@@ -57,10 +57,10 @@
     "D10",
     "D11",
     "D12",
+    "D13",
     "F2",
     "J5",
     "J6",
-    "J7",
     "L2",
     "R39",
     "R40",
@@ -68,13 +68,9 @@
     "R42",
     "R43",
     "R44",
+    "R45",
     "U5"
   ],
-  "errors": [
-    {
-      "bom_quantity": 95,
-      "schematic_components": 103
-    }
-  ],
+  "errors": [],
   "scope": "CAD connectivity and metadata only; no assembled electrical validation"
 }
