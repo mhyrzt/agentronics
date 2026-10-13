@@ -67,4 +67,15 @@
     (uuid "aedfdbc5-7aa6-4318-b36f-a938232c7d0c")
   )
   (embedded_fonts no)
+  (fp_circle
+    (center 0 0)
+    (end 1.6 0)
+    (stroke
+      (width .1)
+      (type default)
+    )
+    (fill none)
+    (layer "F.Fab")
+    (uuid "29a7a6e9-55b1-5456-b596-35ca54b25518")
+  )
 )

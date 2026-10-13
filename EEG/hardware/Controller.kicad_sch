@@ -707,148 +707,6 @@
       )
       (embedded_fonts no)
     )
-    (symbol "Connector_Generic:Conn_01x02"
-      (pin_names
-        (offset 1.016)
-        (hide yes)
-      )
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "J"
-        (at 0 2.54 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Value" "Conn_01x02"
-        (at 0 -5.08 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-        )
-      )
-      (property "Footprint" ""
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (hide yes)
-        )
-      )
-      (property "Datasheet" "~"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (hide yes)
-        )
-      )
-      (property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (hide yes)
-        )
-      )
-      (property "ki_keywords" "connector"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (hide yes)
-        )
-      )
-      (property "ki_fp_filters" "Connector*:*_1x??_*"
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)
-          )
-          (hide yes)
-        )
-      )
-      (symbol "Conn_01x02_1_1"
-        (rectangle
-          (start -1.27 1.27)
-          (end 1.27 -3.81)
-          (stroke
-            (width 0.254)
-            (type default)
-          )
-          (fill
-            (type background)
-          )
-        )
-        (rectangle
-          (start -1.27 0.127)
-          (end 0 -0.127)
-          (stroke
-            (width 0.1524)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (rectangle
-          (start -1.27 -2.413)
-          (end 0 -2.667)
-          (stroke
-            (width 0.1524)
-            (type default)
-          )
-          (fill
-            (type none)
-          )
-        )
-        (pin passive line
-          (at -5.08 0 0)
-          (length 3.81)
-          (name "Pin_1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-        (pin passive line
-          (at -5.08 -2.54 0)
-          (length 3.81)
-          (name "Pin_2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-          (number "2"
-            (effects
-              (font
-                (size 1.27 1.27)
-              )
-            )
-          )
-        )
-      )
-      (embedded_fonts no)
-    )
   )
   (symbol
     (lib_id "Device:R")
@@ -1462,7 +1320,7 @@
         (hide yes)
       )
     )
-    (property "Notes" "Cable header, NOT a dev-board plug-in socket. 3.3 V logic only."
+    (property "Notes" "External ESP32 cable; pin 2 permanently powered from 3V3. Disconnect its 3V3 cable before powering external board by USB."
       (at 70 52.7 0)
       (effects
         (font
@@ -1475,76 +1333,6 @@
       (project "EEG"
         (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/59f1ce6a-9eab-50a0-8c46-0fa9b6c7ac44"
           (reference "J5")
-          (unit 1)
-        )
-      )
-    )
-  )
-  (symbol
-    (lib_id "Connector_Generic:Conn_01x02")
-    (at 234.95000000000002 124.46000000000001 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "de76319d-78ff-5bf4-ac10-a994f4ecbe75")
-    (property "Reference" "J7"
-      (at 240 114.0 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Value" "DEV_POWER_LINK"
-      (at 240 116.54 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-      )
-    )
-    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
-      (at 240 119.08 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "MPN" "61300211121"
-      (at 240 121.62 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "Manufacturer" "Wurth Elektronik"
-      (at 240 124.16 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (property "Notes" "Fit shunt to power external board through 3V3 pin. Remove before its own USB supply/programming."
-      (at 240 126.7 0)
-      (effects
-        (font
-          (size 1.27 1.27)
-        )
-        (hide yes)
-      )
-    )
-    (instances
-      (project "EEG"
-        (path "/2fc4bea2-122a-5020-9ec0-13f239cb6fbc/59f1ce6a-9eab-50a0-8c46-0fa9b6c7ac44"
-          (reference "J7")
           (unit 1)
         )
       )
@@ -1590,7 +1378,7 @@
     )
     (uuid "4d81c0fe-12cd-586c-b807-0d96e2460872")
   )
-  (text "Optional external-board power / REMOVE before its own USB"
+  (text "Automatic external-board power / disconnect power wire before its USB"
     (at 190 110 0)
     (effects
       (font
@@ -1754,7 +1542,7 @@
     )
     (uuid "4bdb39e2-5876-5c3d-b607-ad32703762d3")
   )
-  (text "[C3] Fit J7 only to power the dev board from the EEG 3.3 V rail."
+  (text "[C3] J5 pin 2 is permanently supplied by the EEG 3.3 V rail."
     (at 25 220.0 0)
     (effects
       (font
@@ -1764,7 +1552,7 @@
     )
     (uuid "8489ebf4-3ada-56af-a37a-702a960abe2d")
   )
-  (text "Remove J7 before powering that board from its own USB."
+  (text "Disconnect the J5 pin 2 power cable before its own USB."
     (at 25 223.5 0)
     (effects
       (font
@@ -2275,7 +2063,7 @@
     )
     (uuid "1b703c53-f7ca-523e-b3e7-c4fc42796a82")
   )
-  (global_label "DEV_3V3"
+  (global_label "3V3"
     (shape bidirectional)
     (at 93.98 85.09 0.0)
     (effects
@@ -2395,49 +2183,5 @@
       (justify left)
     )
     (uuid "57845fb7-9e73-549a-b5c7-1a17da71274c")
-  )
-  (wire
-    (pts
-      (xy 229.87 124.46)
-      (xy 223.52 124.46)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "69eb66ea-4ec8-5e29-95da-f99e63e2ead6")
-  )
-  (global_label "3V3"
-    (shape bidirectional)
-    (at 223.52 124.46 180.0)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify right)
-    )
-    (uuid "7c3cef87-8e56-5850-9a53-4e00caa9ad5d")
-  )
-  (wire
-    (pts
-      (xy 229.87 127.0)
-      (xy 223.52 127.0)
-    )
-    (stroke
-      (width 0)
-      (type default)
-    )
-    (uuid "7488373d-27d9-59ff-b4d5-390b64dc97db")
-  )
-  (global_label "DEV_3V3"
-    (shape bidirectional)
-    (at 223.52 127.0 180.0)
-    (effects
-      (font
-        (size 1.27 1.27)
-      )
-      (justify right)
-    )
-    (uuid "099fb2fd-8cd4-5e06-b02d-f9ba75c71113")
   )
 )

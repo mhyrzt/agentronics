@@ -1965,7 +1965,7 @@
     "footprint": "Connector_PinHeader_2.54mm:PinHeader_2x06_P2.54mm_Vertical",
     "nets": {
       "1": "GND",
-      "2": "DEV_3V3",
+      "2": "3V3",
       "3": "MCU_SCLK",
       "4": "ADC_MISO",
       "5": "MCU_MOSI",
@@ -1981,36 +1981,11 @@
     "properties": {
       "MPN": "61301221121",
       "Manufacturer": "Wurth Elektronik",
-      "Notes": "Cable header, NOT a dev-board plug-in socket. 3.3 V logic only."
+      "Notes": "External ESP32 cable; pin 2 permanently powered from 3V3. Disconnect its 3V3 cable before powering external board by USB."
     },
     "caption_position": {
       "x": 70,
       "y": 40
-    }
-  },
-  {
-    "sheet": "Controller",
-    "reference": "J7",
-    "symbol": "Connector_Generic:Conn_01x02",
-    "value": "DEV_POWER_LINK",
-    "position": {
-      "x": 235,
-      "y": 125
-    },
-    "footprint": "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical",
-    "nets": {
-      "1": "3V3",
-      "2": "DEV_3V3"
-    },
-    "rotation": 0,
-    "properties": {
-      "MPN": "61300211121",
-      "Manufacturer": "Wurth Elektronik",
-      "Notes": "Fit shunt to power external board through 3V3 pin. Remove before its own USB supply/programming."
-    },
-    "caption_position": {
-      "x": 240,
-      "y": 114
     }
   },
   {
@@ -2408,6 +2383,57 @@
       "MPN": "",
       "Manufacturer": "",
       "Notes": ""
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "R45",
+    "symbol": "Device:R",
+    "value": "1k",
+    "position": {
+      "x": 315,
+      "y": 267
+    },
+    "rotation": 90,
+    "caption_position": {
+      "x": 315,
+      "y": 257
+    },
+    "footprint": "Resistor_SMD:R_0805_2012Metric",
+    "nets": {
+      "1": "3V3",
+      "2": "PWR_LED_A"
+    },
+    "properties": {
+      "Manufacturer": "Yageo",
+      "MPN": "RC0805FR-071KL",
+      "Notes": "DC power indicator current limit; about 0.65 mA using nominal LED Vf at 2 mA."
+    }
+  },
+  {
+    "sheet": "Power",
+    "reference": "D13",
+    "symbol": "Device:LED",
+    "value": "PWR_GREEN",
+    "position": {
+      "x": 345,
+      "y": 267
+    },
+    "rotation": 180,
+    "caption_position": {
+      "x": 345,
+      "y": 257
+    },
+    "footprint": "LED_SMD:LED_0805_2012Metric",
+    "nets": {
+      "1": "GND",
+      "2": "PWR_LED_A"
+    },
+    "properties": {
+      "Manufacturer": "Kingbright",
+      "MPN": "APT2012LZGCK",
+      "Datasheet": "https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf",
+      "Notes": "Steady 3V3 indicator only; does not prove A5V, ADC operation or battery protection."
     }
   }
 ]
