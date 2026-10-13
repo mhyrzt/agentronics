@@ -2,7 +2,7 @@
 
 An EEG board has an unusual job: preserve a very small voltage difference while its own processor, radio and power supply are doing comparatively noisy work. Understanding this board starts with that tension. The ADC needs quiet inputs and a stable reference; the radio needs bursts of current; the battery has a voltage that changes as it discharges. Each circuit exists to manage part of that problem.
 
-This README walks through **Revision B**, a four-channel, battery-powered learning prototype built in KiCad 9. The PCB is 80 × 80 mm with two copper layers. You can follow the explanation alongside the [annotated schematic overview](exports/previews/EEG.svg) and use the component references, such as **R1** or **U1**, to find the actual parts.
+This README walks through **Revision B**, a four-channel, battery-powered learning prototype built in KiCad 9. The PCB is 60 × 60 mm with two copper layers. You can follow the explanation alongside the [annotated schematic overview](exports/previews/EEG.svg) and use the component references, such as **R1** or **U1**, to find the actual parts.
 
 **Current status:** the schematic and routed PCB pass CAD checks, but the board has not been assembled or electrically tested. Firmware is still to be written. The explanations below describe design intent and calculations, not measured performance or qualification for connection to a person. Start with simulated signals on the bench.
 
@@ -232,7 +232,7 @@ flowchart TD
     OR --> J["J4: removable enable shunt"]
     J --> SW["BAT_SW"]
     SW --> BUCK["U3 AP63203 + L1: 3.3 V buck"]
-    BUCK --> DV["ADC digital + optional J7 power to external ESP32"]
+    BUCK --> DV["ADC digital + automatic power to external ESP32"]
     SW --> BOOST["U5 AP3031 + L2/D11: analog boost"]
     BOOST --> LDO["U4 LP2985-N: regulated 5 V"]
     LDO --> AV["A5V: ADC analog circuitry"]
@@ -273,6 +273,28 @@ That is not a measured radio load. It explains the motivation for **U3, AP63203*
 *Power sheet, P2: identify the bootstrap capacitor, inductor, output capacitors and feedback connection. Click the image for the vector version.*
 
 C28/C29 bypass its input. C30 is the bootstrap capacitor between BST and SW, supporting the high-side gate-drive circuit. C31/C32 store charge at the output, and FB senses the resulting 3.3 V rail. L1's saturation and current ratings provide design margin; a high inductor current rating does not mean the EEG board normally draws that current.
+
+### Why the power LED has its own resistor
+
+**D13** is a small green 0805 LED; **R45** limits its current from the digital 3.3 V rail. The branch is wired as:
+
+```text
+3V3 ── R45 (1 kΩ) ── D13 anode → cathode ── GND
+```
+
+![Power indication circuit with explanatory notes](exports/previews/power-indicator.png)
+
+Using the [Kingbright datasheet](https://www.kingbrightusa.com/images/catalog/spec/apt2012lzgck.pdf) nominal forward voltage of 2.65 V at its 2 mA test current gives an illustrative estimate:
+
+$$
+I_{\mathrm{LED}} \approx \frac{V_{\mathrm{3V3}}-V_F}{R_{45}}
+= \frac{3.3\,\mathrm{V}-2.65\,\mathrm{V}}{1\,\mathrm{k}\Omega}
+= 0.65\,\mathrm{mA}
+$$
+
+The actual forward voltage changes with current and temperature, so measure the fitted LED current and brightness on the bench. A steady indicator avoids adding a blinking load. Its extra current still reduces battery runtime slightly.
+
+The LED indicates **3V3 present**, whether powered from the battery or USB-C through J4. It does not confirm A5V, correct ADC configuration, safe electrode connection or sufficient battery charge. It is not a charger indicator. If an external board back-powers 3V3 through J5 pin 2, the LED may also light. Disconnect that power cable before powering the external board from its own USB.
 
 ### What the USB-C circuit does
 
@@ -325,7 +347,7 @@ Revision B replaces U2 and its onboard RF, reset, boot and UART circuits with **
 
 *Controller sheet: C1 identifies the cable interface, C2 explains acquisition versus networking timing, and C3 explains the optional power link. Click for the vector drawing.*
 
-The PCB labels abbreviate USB_PRESENT as **USB_S** and VIN_SENSE as **VIN_S**. J5 pin 2 is labeled **DEV3V3** and is controlled by J7.
+`USB_PRESENT` and `VIN_SENSE` are the two voltage-monitor nets. J5 pin 2 is permanently connected to **3V3** and automatically supplies the external development board when the EEG rail is powered.
 
 All signal pins use **3.3 V logic**. Keep the SPI cable short, run signal returns beside it, and start at the conservative 1 MHz SPI clock. Long jumper cables are not equivalent to short PCB traces; verify ringing and reliable frame transfers before increasing the clock. R24–R26 remain as 33 Ω series resistors on SCLK/MOSI/CS, though their placement at this board end of a cable cannot substitute for checking the actual source and cable behavior. If needed, place additional damping at the external controller's driving pins after measurement.
 
@@ -340,11 +362,11 @@ A practical firmware target is to serve the browser page over HTTP and stream ba
 
 ### Powering and programming the external board
 
-J7 links the EEG board's 3.3 V rail to J5 pin 2. Fit its shunt only when powering a compatible development board through that board's **3V3** input. This is not a 5 V/VIN output. The design budget for the optional external load is 500 mA at 3.3 V, subject to regulator thermal, transient and assembled-board verification. C24/C25 provide local interface bypass; the external development board retains its own capacitors and regulator circuitry.
+J5 pin 2 connects directly to the EEG board's 3.3 V rail; there is no separate ESP32 power jumper. Connect it to a compatible development board's **3V3** input. This is not a 5 V/VIN output. The design budget for the external load is 500 mA at 3.3 V, subject to regulator thermal, transient and assembled-board verification. C24/C25 provide local interface bypass; the external development board retains its own capacitors and regulator circuitry.
 
-**Remove J7 before connecting the development board's own USB power/programmer.** Do not join two independently powered 3.3 V outputs. Espressif describes USB, 5 V header and 3.3 V header supply options as mutually exclusive for its DevKitC-1; verify that the purchased board follows that behavior. See the [official development-board guide](https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html).
+**Disconnect the J5 pin 2 power wire before connecting the development board's own USB power/programmer.** Do not join two independently powered 3.3 V outputs. Espressif describes USB, 5 V header and 3.3 V header supply options as mutually exclusive for its DevKitC-1; verify that the purchased board follows that behavior. See the [official development-board guide](https://documentation.espressif.com/esp-dev-kits/en/latest/esp32s3/esp32-s3-devkitc-1/user_guide_v1.0.html).
 
-For programming, disconnect electrode cables, remove J7, and use the external board's own USB and buttons. USB data is not routed through J6 on the EEG PCB. For battery-only acquisition tests, disconnect wired programming equipment and use Wi-Fi; keep the bench-only validation boundary in mind.
+For programming, disconnect electrode cables and the J5 pin 2 power wire, and use the external board's own USB and buttons. USB data is not routed through J6 on the EEG PCB. For battery-only acquisition tests, disconnect wired programming equipment and use Wi-Fi; keep the bench-only validation boundary in mind.
 
 ### Why the supply and USB presence need dividers
 
@@ -388,55 +410,85 @@ A schematic shows connectivity; the PCB determines where currents actually flow.
 
 This revision uses two copper layers with ground pours and stitching vias. Its analog inputs, buck and boost switching loops should be inspected with their different sensitivities in mind. Ground copper is useful, but it cannot by itself prove low-noise performance. The [top preview](exports/previews/pcb-top.png) is a useful map; open the routed board for layer-by-layer inspection.
 
-There is no antenna clearance region on this board because the radio is external. Keep the development board and its antenna physically away from electrode cables and the analog front end during measurements. Four mounting holes form a symmetric rectangle and are board-only mechanical features, with clearance for 6 mm nonconductive mounting hardware. The four input rows run in connector order (CH1 through CH4), with 4 mm pitch and shared resistor/clamp/filter columns. The four reference branches also use 4 mm pitch. ADC support capacitors share aligned rows, and J7/J4 line up with the center of J2. Switching components remain grouped by electrical function; small component references appear on F.Fab in the [current assembly preview](exports/previews/pcb-assembly.png).
+There is no antenna clearance region on this board because the radio is external. Keep the development board and its antenna physically away from electrode cables and the analog front end during measurements. Four mounting holes form a symmetric square and are board-only mechanical features, with clearance for 6 mm nonconductive mounting hardware. The four input rows run in connector order (CH1 through CH4), with 3.75 mm pitch and shared resistor/clamp/filter columns. The four reference branches also use 3.75 mm pitch. ADC support capacitors share aligned rows. The ADC U1 is exactly at local **(0, 0)**, the center of the square outline spanning -30 to +30 mm on both local axes. The whole board sits at the center of the A4 drawing sheet: absolute KiCad position **(148.5, 105) mm**, with the grid and placement/drill origins set to the ADC. This keeps the PCB inside the sheet while preserving centered fabrication coordinates. The electrode connector J1 and its eight protection branches are centered vertically on the left, and the external ESP32 header J5 is centered vertically on the right. USB-C is on the bottom edge, the battery connector is at the top, and switching/power circuits occupy top and bottom bands. All placement and drill exports use this local origin; Gerbers use the same origin so the manufacturing layers align. Switching components remain grouped by electrical function; small component references appear inside component bodies on F.Fab in the [current assembly preview](exports/previews/pcb-assembly.png).
 
-The outline is **80 × 80 mm**, within the required **100 × 100 mm maximum**. Compared with 100 × 80 mm in Revision A:
+The outline is **60 × 60 mm**, within the required **100 × 100 mm maximum**. Compared with the previous 80 × 80 mm square layout:
 
 $$
-\text{Area reduction}=1-\frac{80\times80}{100\times80}=20\%
+\text{Area reduction}=1-\frac{60\times60}{80\times80}=43.75\%
 $$
+
+The 60 mm square is a compact practical layout using the existing 0805/1206 passives, through-hole connectors, four mounting holes and two power inputs. It is not a proven mathematical minimum. Further shrinking would require revisiting connector sizes, mounting clearances, component packages or assembly access.
 
 This revision retains **two copper layers** for the dense TQFP fanout, return paths and routing. A one-sided version would need a separately validated layout with jumpers or substantial rearrangement; removing the bottom Gerber from this board would break connections. PCB price depends on the fabricator and order size, so the smaller area is verified while any cost saving remains unquoted. The external development board is an additional purchased assembly. USB support also adds power components, so fewer onboard RF parts do not imply fewer total PCB parts.
 
 ## What does one prototype cost?
 
-The **PCB component planning subtotal is approximately $78.29 USD** for all **103 electrical parts** in the current design manifest. Prices were checked against public distributor listings on **2026-10-13**; listings may be cached and are not binding quotes. The table uses single-piece price anchors multiplied by the fitted quantity. Quantity discounts, minimum orders, spares, taxes, shipping, assembly and PCB fabrication are excluded.
+The **PCB component planning subtotal is approximately $78.64 USD** for all **104 electrical parts** in the current design manifest. Prices were checked against public distributor listings on **2026-10-13**; listings may be cached and are not binding quotes. The tables use single-piece price anchors multiplied by the fitted quantity. Quantity discounts, minimum orders, spares, taxes, shipping, assembly and PCB fabrication are excluded.
 
-**Q** means a listed price for the specified part or stated packaging variant. **E** means a budgeting allowance, not a verified quote for that exact MPN. **C** means the price of a named replacement candidate, not the original part. Several capacitor MPNs are obsolete or unverified: candidates need electrical, footprint and availability review before ordering, and this table does not change the CAD or approve substitutions. Links on E rows explain the allowance or sourcing issue rather than quoting that exact price. This is a planning table, not a purchase-ready BOM; the existing exported BOM is still Revision A.
+Prices mix distributor listings, budgeting allowances and replacement-candidate estimates. Several capacitor MPNs are obsolete or unverified: candidates need electrical, footprint and availability review before ordering. These tables do not change the CAD or approve substitutions. The exported BOM matches the current Revision B design, while unverified part numbers still need sourcing review.
 
-| Fitted references and value | Design MPN | Qty | Unit USD | Extended USD | Price basis |
-| --- | --- | ---: | ---: | ---: | --- |
-| U1 — ADS1299-4 | `ADS1299-4PAG` | 1 | $44.99 | $44.99 | Q: PAGR cut-tape packaging [Listing](https://www.digikey.com/en/products/detail/texas-instruments/ADS1299-4PAGR/6590707) |
-| J1 — ELECTRODES | `B6B-XH-A` | 1 | $0.18 | $0.18 | Q [Listing](https://www.tme.com/us/en-us/details/b6b-xh-a/raster-signal-connectors-2-50mm/jst/) |
-| R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R19, R20, R23, R33, R34, R35, R36, R37, R38, R42 — 10k | `RC0805FR-0710KL` | 20 | $0.10 | $2.00 | Q [Listing](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| D1, D2, D3, D4, D5, D7, D8, D9 — BAV199 | `BAV199,215` | 8 | $0.18 | $1.44 | Q [Listing](https://www.digikey.com/es/products/detail/nexperia-usa-inc/BAV199-215/763223) |
-| C1, C2, C3, C4 — 4.7n | `GRM21A5C1H472JA01D` | 4 | $0.54 | $2.16 | C: C0805C472J5GACTU; original MPN unverified [Basis](https://www.digikey.com/en/products/detail/yageo/CC0805JRNPO9BN472/17008272) |
-| R11, R12 — 499k | `RC0805FR-07499KL` | 2 | $0.10 | $0.20 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| R13 — 1M | `RC0805FR-071ML` | 1 | $0.10 | $0.10 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| C5 — 1n | `GRM21A5C1H102JA01D` | 1 | $0.65 | $0.65 | E: 1 nF C0G allowance; original MPN unverified |
-| C6 — 100u | `T491D107K010AT` | 1 | $1.50 | $1.50 | E: rounded sourcing allowance [Basis](https://www.findchips.com/search/T491D107K010AT) |
-| C7, C8, C10, C13, C14, C15, C16, C17, C18, C21, C38 — 1u | `GRM21BR71E105KA99L` | 11 | $0.30 | $3.30 | E: 1 µF X7R allowance; original obsolete [Basis](https://www.digikey.com/es/products/detail/wec/GRM21BR71E105KA99L/26461505) |
-| C9, C12, C20, C22, C25, C27, C29, C30, C36, C40 — 100n | `GRM21BR71H104KA01L` | 10 | $0.15 | $1.50 | C: 885012207098; original obsolete [Basis](https://www.digikey.com.br/pt/products/detail/murata-electronics/GRM21BR71H104KA01L/586718) |
-| C11, C19, C24, C28, C33, C35, C37 — 10u | `GRM31CR71C106KA12L` | 7 | $0.99 | $6.93 | C: GRM31CR71C106KAC7L; original obsolete [Basis](https://www.digikey.com/es/products/detail/murata-electronics/GRM31CR71C106KAC7L/740043) |
-| R14 — 0 | `RC0805JR-070RL` | 1 | $0.10 | $0.10 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| R15, R16, R17, R18, R21, R22, R32, R44 — 100k | `RC0805FR-07100KL` | 8 | $0.10 | $0.80 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| R24, R25, R26 — 33 | `RC0805FR-0733RL` | 3 | $0.10 | $0.30 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| R31, R43 — 330k | `RC0805FR-07330KL` | 2 | $0.10 | $0.20 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| J2 — 2S_BATTERY | `B2B-XH-A` | 1 | $0.10 | $0.10 | Q [Listing](https://www.digikey.com/en/products/detail/jst-sales-america-inc/B2B-XH-A/1651045) |
-| F1, F2 — 0.75A_PTC | `1812L075/24DR` | 2 | $1.00 | $2.00 | E: PTC allowance |
-| D6, D10, D11 — SS14 | `SS14` | 3 | $0.40 | $1.20 | E: SMA Schottky allowance; vendor suffix needs confirmation |
-| J4, J7 — POWER_ENABLE/DEV_POWER_LINK | `61300211121` | 2 | $0.25 | $0.50 | E: two-pin header allowance |
-| U3 — AP63203WU-7 | `AP63203WU-7` | 1 | $0.89 | $0.89 | Q: availability needs recheck [Listing](https://www.digikey.com/en/products/detail/diodes-incorporated/AP63203WU-7/9858426) |
-| L1, L2 — 4.7uH | `SRP5030T-4R7M` | 2 | $1.00 | $2.00 | Q [Listing](https://www.digikey.com/en/products/detail/bourns-inc/SRP5030T-4R7M/3986084) |
-| C31, C32 — 22u | `GRM31CR61E226KE15L` | 2 | $0.48 | $0.96 | C: CL31A226KAHNNNE; original obsolete [Basis](https://www.digikey.com/en/products/detail/murata-electronics/GRM31CR61E226KE15L/2334878) |
-| U4 — LP2985AIM5-5.0/NOPB | `LP2985AIM5-5.0/NOPB` | 1 | $0.72 | $0.72 | Q [Listing](https://www.mouser.com/ProductDetail/Texas-Instruments/LP2985AIM5-5.0-NOPB?qs=7lkVKPoqpbYsAhhQ4Pn4Tg%3D%3D) |
-| C34 — 10n | `GRM21A5C1H103JA01D` | 1 | $0.75 | $0.75 | E: 10 nF C0G allowance; original MPN unverified |
-| J5 — EXTERNAL_ESP32_3V3 | `61301221121` | 1 | $0.79 | $0.79 | Q [Listing](https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/61301221121/4846846) |
-| J6 — USB_C_BENCH_POWER | `USB4105-GF-A` | 1 | $0.80 | $0.80 | Q [Listing](https://www.digikey.com/en/products/detail/gct/USB4105-GF-A/11198441) |
-| R39, R40 — 5.1k | `RC0805FR-075K1L` | 2 | $0.10 | $0.20 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
-| D12 — SMAJ5.0A | `SMAJ5.0A` | 1 | $0.60 | $0.60 | E: TVS allowance; vendor suffix needs confirmation |
-| U5 — AP3031KTR-G1 | `AP3031KTR-G1` | 1 | $0.33 | $0.33 | Q [Listing](https://www.digikey.com/es/products/detail/diodes-incorporated/AP3031KTR-G1/4470853) |
-| R41 — 442k | `RC0805FR-07442KL` | 1 | $0.10 | $0.10 | E: allowance based on 10 kΩ series sample [Basis](https://www.digikey.com/en/products/detail/yageo/RC0805FR-0710KL/727535) |
+### Active components — ICs, diodes and LED
+
+| Fitted references | Value / part | What it is / use | Design MPN | Qty | Unit USD |
+| --- | --- | --- | --- | ---: | ---: |
+| U1 | ADS1299-4 | Four-channel EEG analog front end; amplifies and digitizes electrode voltages. | `ADS1299-4PAG` | 1 | $44.99 |
+| U3 | AP63203WU-7 | Buck switching regulator; steps the selected power input down to 3.3 V. | `AP63203WU-7` | 1 | $0.89 |
+| U4 | LP2985AIM5-5.0/NOPB | Low-noise linear regulator; produces the ADC’s 5 V analog supply. | `LP2985AIM5-5.0/NOPB` | 1 | $0.72 |
+| U5 | AP3031KTR-G1 | Boost switching regulator; raises the selected input to about 9 V for U4. | `AP3031KTR-G1` | 1 | $0.33 |
+| D1, D2, D3, D4, D5, D7, D8, D9 | BAV199 | Low-leakage dual diodes; clamp excessive input voltages in the electrode branches. | `BAV199,215` | 8 | $0.18 |
+| D6, D10, D11 | SS14 | Schottky diodes; D6 protects/steers battery power, D10 steers USB power, D11 rectifies the boost output. | `SS14` | 3 | $0.40 |
+| D12 | SMAJ5.0A | TVS diode; suppresses voltage transients on USB VBUS. | `SMAJ5.0A` | 1 | $0.60 |
+| D13 | PWR_GREEN | Green LED; indicates that the 3.3 V rail is powered. | `APT2012LZGCK` | 1 | $0.50 |
+
+### Passive components
+
+Resistors set gains, current limits and voltage ratios; capacitors filter and stabilize supplies; inductors store energy in the switching converters.
+
+#### Resistors
+
+| Fitted references | Value | Design MPN | Qty | Unit USD |
+| --- | --- | --- | ---: | ---: |
+| R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R19, R20, R23, R33, R34, R35, R36, R37, R38, R42 | 10 kΩ | `RC0805FR-0710KL` | 20 | $0.10 |
+| R11, R12 | 499 kΩ | `RC0805FR-07499KL` | 2 | $0.10 |
+| R13 | 1 MΩ | `RC0805FR-071ML` | 1 | $0.10 |
+| R14 | 0 Ω | `RC0805JR-070RL` | 1 | $0.10 |
+| R15, R16, R17, R18, R21, R22, R32, R44 | 100 kΩ | `RC0805FR-07100KL` | 8 | $0.10 |
+| R24, R25, R26 | 33 Ω | `RC0805FR-0733RL` | 3 | $0.10 |
+| R31, R43 | 330 kΩ | `RC0805FR-07330KL` | 2 | $0.10 |
+| R39, R40 | 5.1 kΩ | `RC0805FR-075K1L` | 2 | $0.10 |
+| R41 | 442 kΩ | `RC0805FR-07442KL` | 1 | $0.10 |
+| R45 | 1 kΩ | `RC0805FR-071KL` | 1 | $0.10 |
+
+#### Capacitors
+
+| Fitted references | Value | Type / polarity | Design MPN | Qty | Unit USD |
+| --- | --- | --- | --- | ---: | ---: |
+| C1, C2, C3, C4 | 4.7 nF | Ceramic; non-polarized | `GRM21A5C1H472JA01D` | 4 | $0.54 |
+| C5 | 1 nF | Ceramic; non-polarized | `GRM21A5C1H102JA01D` | 1 | $0.65 |
+| C6 | 100 µF | Tantalum; **polarized (+/−)** | `T491D107K010AT` | 1 | $1.50 |
+| C7, C8, C10, C13, C14, C15, C16, C17, C18, C21, C38 | 1 µF | Ceramic; non-polarized | `GRM21BR71E105KA99L` | 11 | $0.30 |
+| C9, C12, C20, C22, C25, C27, C29, C30, C36, C40 | 100 nF | Ceramic; non-polarized | `GRM21BR71H104KA01L` | 10 | $0.15 |
+| C11, C19, C24, C28, C33, C35, C37 | 10 µF | Ceramic; non-polarized | `GRM31CR71C106KA12L` | 7 | $0.99 |
+| C31, C32 | 22 µF | Ceramic; non-polarized | `GRM31CR61E226KE15L` | 2 | $0.48 |
+| C34 | 10 nF | Ceramic; non-polarized | `GRM21A5C1H103JA01D` | 1 | $0.75 |
+
+#### Inductors
+
+| Fitted references | Value | Design MPN | Qty | Unit USD |
+| --- | --- | --- | ---: | ---: |
+| L1, L2 | 4.7 µH | `SRP5030T-4R7M` | 2 | $1.00 |
+
+### Connectors and resettable fuses
+
+| Fitted references | Value / part | Design MPN | Qty | Unit USD |
+| --- | --- | --- | ---: | ---: |
+| J1 | ELECTRODES | `B6B-XH-A` | 1 | $0.18 |
+| J2 | 2S_BATTERY | `B2B-XH-A` | 1 | $0.10 |
+| J4 | POWER_ENABLE | `61300211121` | 1 | $0.25 |
+| J5 | EXTERNAL_ESP32_3V3 | `61301221121` | 1 | $0.79 |
+| J6 | USB_C_BENCH_POWER | `USB4105-GF-A` | 1 | $0.80 |
+| F1, F2 | 0.75A_PTC | `1812L075/24DR` | 2 | $1.00 |
 
 The ADC alone accounts for about 57% of this subtotal. Reducing PCB area can help fabrication cost, but it does not reduce the ADC price. The schematic's power flags are software symbols and cost nothing; mounting holes also require no electrical part.
 
@@ -451,7 +503,7 @@ External items need their own budget. The following are **unquoted planning allo
 | Header cables, mating connector housings/crimps, shunts and nonconductive spacers | $5–15 |
 | **External-item allowance subtotal** | **$45–100** |
 
-Together, components and these accessories suggest **$123.29–$178.29 USD**, before PCB fabrication, assembly, enclosure, electrodes, test equipment, shipping and taxes. Obtain separate quotes for those excluded items. USB-C on this board does not charge the pack; the offboard charger is a separate purchase.
+Together, components and these accessories suggest **$123.64–$178.64 USD**, before PCB fabrication, assembly, enclosure, electrodes, test equipment, shipping and taxes. Obtain separate quotes for those excluded items. USB-C on this board does not charge the pack; the offboard charger is a separate purchase.
 
 ## What must software add?
 
@@ -484,12 +536,11 @@ Pin numbers refer to CAD pad numbers, not a viewpoint-dependent cable order. Ver
 | J4                   |       1–2 | Shunt enables BAT_SW for either source                     |
 | J6                   |     USB-C | 5 V bench power only; no data, PD or charging              |
 | J5, 2×6 cable header |    1 / 12 | GND returns                                                |
-| J5                   |         2 | DEV_3V3: optional output through J7, not 5 V               |
+| J5                   |         2 | 3V3: automatic supply to compatible ESP32 3V3 input, not 5 V               |
 | J5                   |     3 / 4 | MCU_SCLK / ADC_MISO                                        |
 | J5                   |     5 / 6 | MCU_MOSI / MCU_CS                                          |
 | J5                   | 7 / 8 / 9 | ADC_DRDY / ADC_RESET / ADC_START                           |
 | J5                   |   10 / 11 | VIN_SENSE / USB_PRESENT, analog inputs to external MCU     |
-| J7                   |       1–2 | 3V3 → DEV_3V3 link; remove before external board USB power |
 
 J5 is a signal connector, not a socket that matches the development board's physical header rows. Pin numbers refer to PCB pad numbers; verify continuity when making the harness. Charge the protected 2S pack offboard with its compatible charger.
 
@@ -522,7 +573,7 @@ Read the device ID and programmed registers back. Validate the **ADS1299-4** dat
 1. Inspect soldering, polarity and connector numbering; check resistance between BAT_SW/GND, 3V3/GND and A5V/GND before applying power. Look for bridges on ADC and regulator pads. No electrode cable attached.
 2. With no human connection, initially power from a current-limited bench source at approximately 7.4 V through J2. Establish expected idle current; a current limit alone does not prove correct operation. Check 3V3 against the external controller's verified 3.3 V supply limits and A5V against the ADC's 4.75–5.25 V range.
 3. Check startup, steady-state ripple and load-step response at local bypass capacitors with a short ground connection. Measure BOOST9V startup/ripple under analog load and inspect the LDO output for oscillation; confirm effective output capacitance and ESR meet the relevant LP2985-N chip revision requirements. Check regulator and diode temperature.
-4. Program the external ESP32 through its own USB with electrode leads disconnected and J7 removed. Read ADC ID, registers and DRDY; exercise internal test signals and verify gain/scaling and channel order. Confirm RESET/START startup behavior across repeated power cycles.
+4. Program the external ESP32 through its own USB with electrode leads disconnected and the J5 pin 2 power wire disconnected. Read ADC ID, registers and DRDY; exercise internal test signals and verify gain/scaling and channel order. Confirm RESET/START startup behavior across repeated power cycles.
 5. Use an isolated signal simulator or bench fixtures, never a person for this stage. Measure shorted-input noise and offsets. Then apply small differential sine waves around the appropriate analog common-mode voltage through representative source resistances. Check clipping, common-mode rejection, mains pickup and reference filter branches.
 6. Enable and test the bias loop with a simulated electrode/load network. Verify stability, output range and resistor-chain continuity. Exercise detached electrodes and saturation, Wi-Fi reconnects, dropped packets and loaded-battery shutdown.
 7. Repeat acquisition on the protected battery with all wired bench equipment disconnected. Independent safety and analog-performance review is required before considering recording on a person.
@@ -533,28 +584,28 @@ Open [hardware/EEG.kicad_pro](hardware/EEG.kicad_pro) in KiCad 9 or newer with t
 
 | If you want to…                 | Open…                                                                                                                  |
 |---------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| Read the circuits without KiCad | Six-page PDF pending export; [annotated SVG overview](exports/previews/EEG.svg)                                        |
+| Read the circuits without KiCad | [Six-page schematic PDF](exports/schematic.pdf); [annotated SVG overview](exports/previews/EEG.svg)                                        |
 | Edit the design                 | [KiCad project](hardware/EEG.kicad_pro)                                                                                |
 | Inspect routing                 | [PCB](hardware/EEG.kicad_pcb) and [top preview](exports/previews/pcb-top.png)                                          |
-| Find exact parts                | BOM regeneration pending; exact parts in [design manifest](hardware/design-manifest.json)                              |
+| Find exact parts                | [BOM](exports/BOM.csv) and [design manifest](hardware/design-manifest.json)                              |
 | Assemble the board              | [Assembly drawing](exports/assembly.pdf) and [placement CSV](exports/fabrication/positions.csv)                        |
 | Review manufacturing outputs    | [Gerbers and drills](exports/fabrication/)                                                                             |
-| Download the organized project  | Revision B ZIP pending export completion                                                                               |
+| Download the organized project  | [Revision B design ZIP](releases/EEG-revB-design.zip)                                                                               |
 | Review CAD check results        | [ERC](reports/schematic-erc.rpt), [DRC](reports/final-drc.json), [connectivity audit](reports/connectivity-audit.json) |
 
 ## Fabrication and assembly details
 
-**Revision B manufacturing exports are pending.** Do not order from the existing fabrication directory until the Rev B exports and final checks are regenerated.
+**The exports now match the compact 60 × 60 mm Revision B board.** Gerbers, drills, placement data, schematic/assembly PDFs and BOM have been regenerated after clean CAD checks. Resolve the obsolete or unverified capacitor part numbers in the price table before ordering components; assembled electrical validation is still pending.
 
-Specify two layers, 1.6 mm FR-4, 35 µm copper, solder mask on both sides, and 0.20 mm trace/space capability. Routing vias are 0.60/0.30 mm; there are no onboard radio-module thermal holes. Confirm 0.30 mm plated routing-via drill capability with the fabricator. The board outline is 80 × 80 mm; the external development board and cables determine the assembled envelope.
+Specify two layers, 1.6 mm FR-4, 35 µm copper, solder mask on both sides, and 0.20 mm trace/space capability. Routing vias are 0.60/0.30 mm; there are no onboard radio-module thermal holes. Confirm 0.30 mm plated routing-via drill capability with the fabricator. The board outline is 60 × 60 mm; the external development board and cables determine the assembled envelope.
 
 Assembly includes a USB-C receptacle, a 0.5 mm-pitch TQFP ADC and small regulators. Reflow/stencil assembly is preferable. Check the polarity of C6, D6 and J2, and verify connector numbering against the assembly drawing. Clean flux around high-impedance analog inputs: residue can introduce leakage and offsets.
 
-External accessories are not in the PCB BOM: a commercially protected/balanced 2S pack with matching polarized lead, compatible offboard charger, a rated J4 shunt, electrode connector housing/crimps, simulator cables, an external ESP32 development board, J5 jumper cables, a removable J7 power shunt, a dedicated 5 V USB-C bench adapter and four nonconductive mounting spacers. See the price table above for component listings and explicitly unquoted accessory allowances; availability still needs checking before purchase.
+External accessories are not in the PCB BOM: a commercially protected/balanced 2S pack with matching polarized lead, compatible offboard charger, a rated J4 shunt, electrode connector housing/crimps, simulator cables, an external ESP32 development board, J5 jumper cables, a dedicated 5 V USB-C bench adapter and four nonconductive mounting spacers. See the price table above for component listings and explicitly unquoted accessory allowances; availability still needs checking before purchase.
 
 ## What the checks prove, and what remains to learn
 
-ERC checks schematic rules such as pin connections. DRC checks board rules such as spacing and unconnected copper, and schematic parity compares the board with the schematic. A separate audit compares every numbered electrical PCB pad with the exported netlist and checks BOM quantities. Revision B currently passes ERC with zero errors or warnings. The routed PCB passes DRC with zero violations, zero unconnected items and zero schematic parity issues; numbered-pad connectivity matches the netlist. The PDF, BOM and manufacturing outputs must be regenerated before fabrication; the aggregate audit currently flags the old BOM quantity. Revision A outputs are retained in the archive.
+ERC checks schematic rules such as pin connections. DRC checks board rules such as spacing and unconnected copper, and schematic parity compares the board with the schematic. A separate audit compares every numbered electrical PCB pad with the exported netlist and checks BOM quantities. Revision B currently passes ERC with zero errors or warnings. The routed PCB passes DRC with zero violations, zero unconnected items and zero schematic parity issues; numbered-pad connectivity matches the netlist. The regenerated BOM contains all 104 electrical components, and the aggregate connectivity/metadata audit passes. The PDF and manufacturing outputs match this saved layout. Revision A outputs are retained in the archive.
 
 Those are useful CAD results, but they do not measure rail ripple, input noise, common-mode rejection, bias-loop stability, Wi-Fi packet loss, runtime or electrical safety. The bench sequence above is how the project begins answering those questions. Firmware, assembled measurements and independent safety review are still pending. Do not connect electrodes to a person while charging, using a wired programming cable or using grounded bench instruments. This revision is not a medical device or a certified patient interface.
 
